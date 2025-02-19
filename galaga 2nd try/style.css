@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000; /* Dark background */
+}
+
+#game-container {
+    width: 80%; /* Adjust as needed */
+    max-width: 400px; /* Maximum width for larger screens */
+    height: 90vh; /* Adjust as needed */
+    max-height: 700px; /* Max height */
+    display: flex;
+    flex-direction: column;
+    background-color: #222; /* Darker container background */
+    border: 2px solid #555;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+#title-score-container {
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+#auto-fire-button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#game-area {
+    flex-grow: 1; /* Take up remaining space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#game-canvas {
+    background-color: #000; /* Black canvas background */
+    width: 100%;
+    height: 100%;
+    display: block; /* Remove extra space below canvas */
+}
