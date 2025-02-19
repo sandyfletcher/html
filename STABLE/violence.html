@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domestic Violence Help</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFEBF3;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .flowchart {
+            max-width: 600px;
+            width: 100%;
+        }
+        .step {
+            background-color: #FFF;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: opacity 0.3s ease;
+        }
+        .step.inactive {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        .step-content {
+            display: flex;
+            align-items: center;
+        }
+        .checkbox {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        h1 {
+            color: #444;
+            text-align: center;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Domestic Violence Help</h1>
+    <div class="flowchart">
+        <div class="step" id="step1">
+            <div class="step-content">
+                <input type="checkbox" class="checkbox" id="checkbox1">
+                <label for="checkbox1">Recognize that you're in a domestic violence situation</label>
+            </div>
+        </div>
+        <div class="step inactive" id="step2">
+            <div class="step-content">
+                <input type="checkbox" class="checkbox" id="checkbox2">
+                <label for="checkbox2">Ensure your immediate safety (call emergency services if in immediate danger)</label>
+            </div>
+        </div>
+        <div class="step inactive" id="step3">
+            <div class="step-content">
+                <input type="checkbox" class="checkbox" id="checkbox3">
+                <label for="checkbox3">Contact a domestic violence hotline for support and resources</label>
+            </div>
+        </div>
+        <div class="step inactive" id="step4">
+            <div class="step-content">
+                <input type="checkbox" class="checkbox" id="checkbox4">
+                <label for="checkbox4">Create a safety plan for leaving the abusive situation</label>
+            </div>
+        </div>
+        <div class="step inactive" id="step5">
+            <div class="step-content">
+                <input type="checkbox" class="checkbox" id="checkbox5">
+                <label for="checkbox5">Seek legal advice and consider obtaining a protective order</label>
+            </div>
+        </div>
+    </div>
+    <p><a href="index.html">Back to Home</a></p>
+    <script>
+        const steps = document.querySelectorAll('.step');
+        const checkboxes = document.querySelectorAll('.checkbox');
+
+        checkboxes.forEach((checkbox, index) => {
+            checkbox.addEventListener('change', () => {
+                if (checkbox.checked && index < steps.length - 1) {
+                    steps[index + 1].classList.remove('inactive');
+                } else if (!checkbox.checked && index < steps.length - 1) {
+                    for (let i = index + 1; i < steps.length; i++) {
+                        steps[i].classList.add('inactive');
+                        checkboxes[i].checked = false;
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

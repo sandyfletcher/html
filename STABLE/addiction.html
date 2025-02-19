@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addiction Help</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #E6F3FF;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #4682B4;
+        }
+        .flowchart {
+            max-width: 600px;
+            width: 100%;
+        }
+        .step {
+            background-color: #FFF;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: opacity 0.3s ease;
+        }
+        .step.inactive {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        .step-content {
+            display: flex;
+            align-items: center;
+        }
+        .checkbox {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .lorem-ipsum {
+            text-align: center;
+            max-width: 600px;
+            margin-bottom: 20px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        a {
+            color: #4682B4;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .checked label {
+            text-decoration: line-through;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <h1>Drugs/Alcohol Help</h1>
+    <div class="lorem-ipsum">
+        <p>Embarking on a journey to recovery is a significant step, and it's important to remember that you’re not alone. Many people struggle with substance use, and experiencing challenges along the way is completely normal. What matters most is your willingness to take action and work on making positive changes in your life.</p>
+    </div>
+    <div class="flowchart">
+        <div class="step" id="step1">
+            <div class="step-content">
+                <input type="checkbox" class="checkbox" id="checkbox1">
+                <label for="checkbox1">Acknowledge the Problem: Recognize and accept that substance use has become a problem in your life. Be honest about its impact on your well-being.</label>
+            </div>
+        </div>
+        <div class="step inactive" id="step2">
+            <div class="step-content">
+                <input type="checkbox" class="checkbox" id="checkbox2">
+                <label for="checkbox2">Set Clear Goals: Define specific, measurable goals for your recovery. Decide whether you want to quit entirely or reduce use, and outline what success looks like for you.</label>
+            </div>
+        </div>
+        <div class="step inactive" id="step3">
+            <div class="step-content">
+                <input type="checkbox" class="checkbox" id="checkbox3">
+                <label for="checkbox3">Understand Your Triggers: Identify situations, emotions, or people that trigger cravings. Keep a journal to track these triggers and your responses to them.</label>
+            </div>
+        </div>
+        <div class="step inactive" id="step4">
+            <div class="step-content">
+                <input type="checkbox" class="checkbox" id="checkbox4">
+                <label for="checkbox4">Develop Coping Strategies: Create a toolkit of strategies to manage cravings and stress, such as mindfulness, deep breathing, exercise, or engaging in hobbies.</label>
+            </div>
+        </div>
+        <div class="step inactive" id="step5">
+            <div class="step-content">
+                <input type="checkbox" class="checkbox" id="checkbox5">
+                <label for="checkbox5">Build a Support Network: Connect with supportive friends, family, or peers. Consider joining a secular recovery group to share experiences and gain encouragement.</label>
+            </div>
+        </div>
+        <div class="step inactive" id="step5">
+            <div class="step-content">
+                <input type="checkbox" class="checkbox" id="checkbox5">
+                <label for="checkbox5">Practice Self-Reflection: Regularly assess your thoughts and behaviors. Use techniques from CBT to challenge negative thought patterns and reinforce positive changes.</label>
+            </div>
+        </div>
+        <div class="step inactive" id="step5">
+            <div class="step-content">
+                <input type="checkbox" class="checkbox" id="checkbox5">
+                <label for="checkbox5">Make Amends and Take Responsibility: If your substance use has harmed others, take steps to make amends where possible. Focus on accountability and personal growth.</label>
+            </div>
+        </div>
+        <div class="step inactive" id="step5">
+            <div class="step-content">
+                <input type="checkbox" class="checkbox" id="checkbox5">
+                <label for="checkbox5">Focus on Relapse Prevention: Develop a plan for what to do if you experience cravings or slip-ups. Identify healthy alternatives and support options.</label>
+            </div>
+        </div>
+        <div class="step inactive" id="step5">
+            <div class="step-content">
+                <input type="checkbox" class="checkbox" id="checkbox5">
+                <label for="checkbox5">Commit to Continuous Learning: Educate yourself about addiction and recovery. Attend workshops, read books, or engage in online resources to deepen your understanding.</label>
+            </div>
+        </div>
+        <div class="step inactive" id="step5">
+            <div class="step-content">
+                <input type="checkbox" class="checkbox" id="checkbox5">
+                <label for="checkbox5">Celebrate Progress: Recognize and celebrate your achievements, no matter how small. Acknowledge your growth and resilience throughout the recovery journey.</label>
+            </div>
+        </div>
+    </div>
+    <p><a href="index.html">Back to Home</a></p>
+    <script>
+        const steps = document.querySelectorAll('.step');
+        const checkboxes = document.querySelectorAll('.checkbox');
+
+        checkboxes.forEach((checkbox, index) => {
+            checkbox.addEventListener('change', () => {
+                if (checkbox.checked) {
+                    checkbox.parentElement.classList.add('checked');
+                    if (index < steps.length - 1) {
+                        steps[index + 1].classList.remove('inactive');
+                    }
+                } else {
+                    checkbox.parentElement.classList.remove('checked');
+                    for (let i = index + 1; i < steps.length; i++) {
+                        steps[i].classList.add('inactive');
+                        checkboxes[i].checked = false;
+                        checkboxes[i].parentElement.classList.remove('checked');
+                    }
+                }
+            });
+        });
+
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.querySelector('h1').style.opacity = '1';
+            }, 500);
+            setTimeout(() => {
+                document.querySelector('.lorem-ipsum').style.opacity = '1';
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

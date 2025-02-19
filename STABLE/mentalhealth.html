@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Help</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #7FB3D5;
+            --secondary-color: #D5F5E3;
+            --text-color: #2C3E50;
+            --background-color: #F4F6F7;
+        }
+        body {
+            font-family: 'Merriweather', serif;
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        .content {
+            max-width: 800px;
+            width: 100%;
+            padding: 40px 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .intro {
+            text-align: justify;
+            margin-bottom: 30px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            background-color: var(--secondary-color);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .step {
+            background-color: #FFF;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .step.inactive {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        .step-content {
+            display: flex;
+            align-items: flex-start;
+        }
+        .checkbox {
+            width: 24px;
+            height: 24px;
+            margin-right: 15px;
+            margin-top: 3px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border: 2px solid var(--primary-color);
+            border-radius: 5px;
+            outline: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .checkbox:checked {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        .checkbox:checked::after {
+            content: '\2714';
+            display: block;
+            text-align: center;
+            color: white;
+            font-size: 16px;
+            line-height: 24px;
+        }
+        .checked label {
+            text-decoration: line-through;
+            color: #999;
+        }
+        label {
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+        }
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #5499C7;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Mental Health Help</h1>
+        <div class="intro">
+            <p>Taking steps towards mental health recovery is a courageous decision and an important part of living a fulfilling life. Mental health challenges are common, and seeking help is a sign of strength, not weakness. Engaging in this journey can lead to greater self-awareness, resilience, and overall well-being.</p>
+        </div>
+        <div class="step" id="step1">
+            <div class="step-content">
+                <input type="checkbox" class="checkbox" id="checkbox1">
+                <label for="checkbox1"><strong>Acknowledge Your Feelings</strong>: Recognize and accept your emotions without judgment. It's okay to feel overwhelmed, anxious, or sad—acknowledging these feelings is the first step toward healing.</label>
+            </div>
+        </div>
+        <div class="step inactive" id="step2">
+            <div class="step-content">
+                <input type="checkbox" class="checkbox" id="checkbox2">
+                <label for="checkbox2"><strong>Seek Professional Support</strong>: Consider reaching out to a mental health professional, such as a therapist or counselor. They can provide guidance, support, and evidence-based strategies tailored to your needs.</label>
+            </div>
+        </div>
+        <div class="step inactive" id="step3">
+            <div class="step-content">
+                <input type="checkbox" class="checkbox" id="checkbox3">
+                <label for="checkbox3"><strong>Build a Support Network</strong>: Surround yourself with supportive friends, family, or peer groups. Share your experiences and lean on others for encouragement and understanding.</label>
+            </div>
+        </div>
+        <div class="step inactive" id="step4">
+            <div class="step-content">
+                <input type="checkbox" class="checkbox" id="checkbox4">
+                <label for="checkbox4"><strong>Practice Mindfulness</strong>: Incorporate mindfulness techniques into your daily routine. Mindfulness can help you stay present, reduce anxiety, and improve emotional regulation.</label>
+            </div>
+        </div>
+        <div class="step inactive" id="step5">
+            <div class="step-content">
+                <input type="checkbox" class="checkbox" id="checkbox5">
+                <label for="checkbox5"><strong>Establish a Routine</strong>: Create a structured daily schedule that includes time for self-care, work, and relaxation. Routines can provide stability and a sense of control.</label>
+            </div>
+        </div>
+        <div class="step inactive" id="step6">
+            <div class="step-content">
+                <input type="checkbox" class="checkbox" id="checkbox6">
+                <label for="checkbox6"><strong>Set Realistic Goals</strong>: Identify small, achievable goals that align with your recovery. Celebrate your progress, no matter how minor, to build confidence and motivation.</label>
+            </div>
+        </div>
+        <div class="step inactive" id="step7">
+            <div class="step-content">
+                <input type="checkbox" class="checkbox" id="checkbox7">
+                <label for="checkbox7"><strong>Develop Healthy Coping Mechanisms</strong>: Replace unhealthy coping strategies with positive alternatives. Engage in activities that bring you joy, such as exercise, art, or spending time in nature.</label>
+            </div>
+        </div>
+        <div class="step inactive" id="step8">
+            <div class="step-content">
+                <input type="checkbox" class="checkbox" id="checkbox8">
+                <label for="checkbox8"><strong>Monitor Your Thoughts</strong>: Practice cognitive restructuring to identify and challenge negative thought patterns. Replace unhelpful thoughts with more balanced, realistic ones.</label>
+            </div>
+        </div>
+        <div class="step inactive" id="step9">
+            <div class="step-content">
+                <input type="checkbox" class="checkbox" id="checkbox9">
+                <label for="checkbox9"><strong>Prioritize Self-Care</strong>: Make self-care a non-negotiable part of your routine. This can include physical activity, proper nutrition, sufficient sleep, and engaging in hobbies that nourish your spirit.</label>
+            </div>
+        </div>
+        <div class="step inactive" id="step10">
+            <div class="step-content">
+                <input type="checkbox" class="checkbox" id="checkbox10">
+                <label for="checkbox10"><strong>Reflect and Adjust</strong>: Regularly assess your mental health journey. Reflect on what's working and what needs adjustment. Be flexible and open to trying new strategies as needed.</label>
+            </div>
+        </div>
+        <p><a href="index.html">Back to Home</a></p>
+    </div>
+    <script>
+        const steps = document.querySelectorAll('.step');
+        const checkboxes = document.querySelectorAll('.checkbox');
+
+        checkboxes.forEach((checkbox, index) => {
+            checkbox.addEventListener('change', () => {
+                if (checkbox.checked) {
+                    checkbox.parentElement.classList.add('checked');
+                    if (index < steps.length - 1) {
+                        steps[index + 1].classList.remove('inactive');
+                    }
+                    // Trigger confetti effect
+                    confetti({
+                        particleCount: 100,
+                        spread: 70,
+                        origin: { y: 0.6 }
+                    });
+                } else {
+                    checkbox.parentElement.classList.remove('checked');
+                    for (let i = index + 1; i < steps.length; i++) {
+                        steps[i].classList.add('inactive');
+                        checkboxes[i].checked = false;
+                        checkboxes[i].parentElement.classList.remove('checked');
+                    }
+                }
+            });
+        });
+
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.querySelector('h1').style.opacity = '1';
+            }, 500);
+            setTimeout(() => {
+                document.querySelector('.intro').style.opacity = '1';
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
