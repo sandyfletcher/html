@@ -1,0 +1,91 @@
+/* Reset some default styles for consistency */
+body, h1, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: sans-serif;
+    height: 100vh; /* Make sure the body takes up the full viewport height */
+    overflow: hidden; /* Prevent body scrollbars */
+}
+
+.container {
+    display: flex;
+    height: 100%; /* Take up the full height of the body */
+}
+
+/* Main content area */
+.content {
+    flex: 1; /* Takes up the remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center */
+    align-items: center; /* Horizontally center */
+    padding-left: 10%; /* Offset content to the left */
+}
+
+.content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-align: left; /* important for aligning Sandy Sandy left */
+    width: 100%; /* Important: Allow text-align to work relative to the container */
+
+}
+
+.options {
+    display: flex;
+    gap: 20px; /* Spacing between options */
+}
+
+.options a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 8px 16px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+.options a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 100px; /* Adjust width as needed */
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white */
+    overflow: hidden; /* Crucial for scroll effect */
+}
+
+.sidebar-content {
+    height: 100vh;  /*Important: scroll works on content exceeding height*/
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.icon-link:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
