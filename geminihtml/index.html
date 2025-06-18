@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML-Only Recipe Showcase</title>
+    <!-- This site uses HTML attributes for styling, as no CSS is allowed. -->
+</head>
+<body bgcolor="#FFFFE0" text="#333333" link="#0077CC" vlink="#551A8B" alink="#FF0000">
+
+    <!-- Page Header -->
+    <header align="center">
+        <font face="Arial, Helvetica, sans-serif" size="7" color="#A52A2A">
+            <h1>HTML Recipe Showcase</h1>
+        </font>
+        <p>
+            <font face="Verdana, Geneva, sans-serif" size="3">
+                Welcome! This website is a simple recipe collection, built <em>entirely</em> with HTML. <br>
+                It's a demonstration of what can be achieved using <strong>only</strong> the HyperText Markup Language, without any CSS or JavaScript.
+            </font>
+        </p>
+        <hr width="80%" size="3" color="#A52A2A" noshade>
+    </header>
+
+    <!-- Navigation -->
+    <nav align="center">
+        <font face="Arial, Helvetica, sans-serif" size="4">
+            <a href="index.html">Home</a> |
+            <a href="mac_and_cheese.html">Mac and Cheese Recipe</a> |
+            <a href="#html_features_showcase">HTML Features Used</a>
+        </font>
+        <hr width="60%" size="1" color="#CCCCCC" noshade>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Recipes Section -->
+        <section id="recipes">
+            <h2 align="center"><font color="#006400" face="Arial, Helvetica, sans-serif">Our Recipes</font></h2>
+            <table width="70%" align="center" cellpadding="15" cellspacing="5">
+                <tr>
+                    <td align="center" valign="top" width="50%" bgcolor="#FFFACD">
+                        <h3><font face="Arial, Helvetica, sans-serif"><a href="mac_and_cheese.html">The Ultimate Mac and Cheese</a></font></h3>
+                        <p><font face="Georgia, serif" size="3">A deliciously creamy and cheesy baked mac and cheese. The definitive comfort food classic, presented purely in HTML!</font></p>
+                        <!-- Simple ASCII art representation -->
+                        <pre>
+  .-"""""-.
+ /         \
+|  MAC &    |
+|  CHEESE   |
+ \  _____  /
+  '-.....-'
+  /       \
+ (_________)
+                        </pre>
+                        <p><a href="mac_and_cheese.html"><font size="3"><b>View Recipe »</b></font></a></p>
+                    </td>
+                    <td align="center" valign="top" width="50%" bgcolor="#F0FFF0">
+                        <h3><font face="Arial, Helvetica, sans-serif">More Recipes Coming Soon!</font></h3>
+                        <p><font face="Georgia, serif" size="3">We're cooking up more HTML-only recipes. Check back later for more examples of web culinary art!</font></p>
+                        <font size="7" color="#3CB371">?</font>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <hr width="80%" size="2" color="#A52A2A" noshade>
+
+        <!-- HTML Features Showcase Section -->
+        <section id="html_features_showcase">
+            <h2 align="center"><font color="#006400" face="Arial, Helvetica, sans-serif">HTML Features Demonstrated</font></h2>
+            <p align="center">
+                <font face="Verdana, Geneva, sans-serif" size="3">
+                    This site exclusively uses HTML tags and attributes to structure and present content. <br>
+                    Below are some of the HTML features you'll find in use across this website:
+                </font>
+            </p>
+
+            <table align="center" border="1" cellpadding="7" cellspacing="0" width="80%" bgcolor="#F5F5F5">
+                <tr bgcolor="#D3D3D3">
+                    <th><font face="Arial, Helvetica, sans-serif">Feature Category</font></th>
+                    <th><font face="Arial, Helvetica, sans-serif">Examples Used</font></th>
+                    <th><font face="Arial, Helvetica, sans-serif">Description</font></th>
+                </tr>
+                <tr>
+                    <td><strong>Document Structure</strong></td>
+                    <td><code><!DOCTYPE html></code>, <code><html></code>, <code><head></code>, <code><meta></code>, <code><title></code>, <code><body></code></td>
+                    <td>Basic foundation of any HTML page.</td>
+                </tr>
+                <tr>
+                    <td><strong>Semantic Sections</strong></td>
+                    <td><code><header></code>, <code><nav></code>, <code><main></code>, <code><section></code>, <code><article></code>, <code><footer></code></td>
+                    <td>Organize content semantically, improving structure and accessibility (even without CSS styling).</td>
+                </tr>
+                <tr>
+                    <td><strong>Headings & Paragraphs</strong></td>
+                    <td><code><h1></code> to <code><h6></code>, <code><p></code></td>
+                    <td>For titles, sub-titles, and standard text blocks.</td>
+                </tr>
+                <tr>
+                    <td><strong>Text Formatting (Inline)</strong></td>
+                    <td><code><strong></code>, <code><em></code>, <code><mark></code>, <code><small></code>, <code><sub></code>, <code><sup></code>, <code><del></code>, <code><ins></code>, <code><code></code>, <code><q></code>, <code><blockquote></code>, <code><abbr></code>, <code><dfn></code></td>
+                    <td>
+                        Emphasizing or styling text. Example: This is <mark>highlighted</mark>, H<sub>2</sub>O (subscript), E=mc<sup>2</sup> (superscript).
+                        <small>This is small text.</small> <del>Deleted.</del> <ins>Inserted.</ins> <q>Short quote.</q>
+                        An <abbr title="HyperText Markup Language">HTML</abbr> <dfn>definition</dfn>.
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Lists</strong></td>
+                    <td><code><ul></code> (unordered), <code><ol></code> (ordered), <code><li></code> (list item)</td>
+                    <td>Crucial for recipe ingredients and step-by-step directions.</td>
+                </tr>
+                <tr>
+                    <td><strong>Links (Anchors)</strong></td>
+                    <td><code><a href="url"></code>, <code><a href="#id"></code> (internal page links)</td>
+                    <td>For navigation between pages and sections within a page.</td>
+                </tr>
+                <tr>
+                    <td><strong>Tables</strong></td>
+                    <td><code><table></code>, <code><tr></code>, <code><th></code>, <code><td></code>, and attributes like <code>border</code>, <code>cellpadding</code>, <code>cellspacing</code>, <code>width</code>, <code>align</code>, <code>bgcolor</code>.</td>
+                    <td>Used here to display this list of features, for recipe overview info, and sometimes for basic layout structuring in an HTML-only context.</td>
+                </tr>
+                <tr>
+                    <td><strong>Forms (Demonstrative)</strong></td>
+                    <td><code><form></code>, <code><label></code>, <code><input></code> (various types: text, radio, checkbox, submit, reset), <code><textarea></code>, <code><select></code>, <code><option></code>, <code><fieldset></code>, <code><legend></code>, <code><button></code>.</td>
+                    <td>Showcasing form elements. As there's no backend or JS, forms are for display only.</td>
+                </tr>
+                <tr>
+                    <td><strong>Images & Graphics (Alternatives)</strong></td>
+                    <td><code><img src="path" alt="text" width="W" height="H"></code> (not used with external files here), <code><pre></code> for ASCII art.</td>
+                    <td>Standard image tag. <code><pre></code> allows for preformatted text, useful for simple text-based graphics.</td>
+                </tr>
+                <tr>
+                    <td><strong>Interactive Elements (HTML Native)</strong></td>
+                    <td><code><details></code>, <code><summary></code></td>
+                    <td>
+                        Creates a user-interactive widget that can be opened/closed to reveal content.
+                        <details>
+                            <summary><font color="blue">Click to see a hidden HTML fact!</font></summary>
+                            <p>HTML was first created by Tim Berners-Lee in 1990!</p>
+                        </details>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Horizontal Rules & Line Breaks</strong></td>
+                    <td><code><hr></code>, <code><br></code></td>
+                    <td><code><hr></code> for thematic breaks (visual lines), <code><br></code> for forced line breaks within text.</td>
+                </tr>
+                <tr>
+                    <td><strong>Styling (Deprecated HTML Attributes)</strong></td>
+                    <td><code><font color="" size="" face=""></code>, <code>bgcolor=""</code>, <code>text=""</code>, <code>link=""</code> (on body), <code>align=""</code>, <code>width=""</code>, <code>height=""</code>, <code>noshade</code> (on hr).</td>
+                    <td>
+                        Demonstrates old HTML styling methods used when CSS is unavailable. Modern web development relies on CSS for all styling.
+                        Example: <font color="purple" size="+1" face="Courier New, Courier, monospace">This text is styled using the <font> tag!</font>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <hr width="80%" size="3" color="#A52A2A" noshade>
+
+    <!-- Page Footer -->
+    <footer align="center">
+        <p>
+            <font face="Arial, Helvetica, sans-serif" size="2" color="#555555">
+                © 2023 HTML-Only Recipe Creations. <br>
+                This website is a proud (and very basic) demonstration of <em>pure HTML power!</em>
+            </font>
+        </p>
+    </footer>
+
+</body>
+</html>
