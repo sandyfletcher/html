@@ -9,109 +9,227 @@
 <body bgcolor="#F5F5DC">
     <header>
         <center>
-            <font size="+4"><strong>Recipe Book</strong></font>
+            <!-- thick outer frame -->
+            <table width="95%" border="0" cellspacing="0" cellpadding="4" bgcolor="#4A2C2A">
+                <tr>
+                    <td>
+                        <!-- actual header box -->
+                        <table width="100%" border="0" cellspacing="0" cellpadding="20" bgcolor="#8B4513">
+                            <tr>
+                                <td align="center">
+                                    <font size="7" face="Georgia, Times New Roman, serif" color="#FFFFFF">
+                                        <b><i>DIGITAL COOKBOOK</i></b>
+                                    </font>
+                                    <br>
+                                    <font size="4" face="Verdana, Arial, sans-serif" color="#FFD700">
+                                        <tt>SHOWCASING THE CAPABILITIES OF HTML</tt>
+                                    </font>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <!-- scrolling news ticker -->
+            <table width="95%" border="0" cellspacing="0" cellpadding="5">
+                <tr>
+                    <td bgcolor="#FFE4B5">
+                        <marquee scrollamount="4" behavior="scroll" direction="left">
+                            <font face="Courier New" size="2" color="#8B4513">
+                                <b>LATEST UPDATES:</b>
+                                Grandma's Loaf Pan Bread has been added to the database! &bull; 
+                                Deviled Eggs recipe now features "The Tabasco Secret" &bull; 
+                                Stay tuned for our upcoming Seafood special...
+                            </font>
+                        </marquee>
+                    </td>
+                </tr>
+            </table>
         </center>
         <br>
+        <!-- table of contents -->
         <nav>
             <center>
-                <table border="0" cellspacing="0" cellpadding="4">
+                <!-- Outer Frame: Dark Shadow -->
+                <table border="0" cellpadding="0" cellspacing="0" width="90%" bgcolor="#4B2C20">
                     <tr>
-                        <td width="33%" valign="top"><a href="#bread">🍞 Bread</a></td>
-                        <td width="33%" valign="top"><a href="#salad">🥗 Salad</a></td>
-                        <td width="33%" valign="top"><a href="#seafood">🐟 Seafood</a></td>
-                    </tr>
-                    <tr>
-                        <td valign="top"><a href="#eggs">🍳 Eggs</a></td>
-                        <td valign="top"><a href="#pasta">🍝 Pasta</a></td>
-                        <td valign="top"><a href="#beef">🐄 Beef</a></td>
-                    </tr>
-                    <tr>
-                        <td valign="top"><a href="#potato">🥔 Potato</a></td>
-                        <td valign="top"><a href="#sides">🥡 Sides</a></td>
-                        <td valign="top"><a href="#pork">🐖 Pork</a></td>
-                    </tr>
-                    <tr>
-                        <td valign="top"><a href="#soup">🥘 Soup</a></td>
-                        <td valign="top"><a href="#chicken">🐓 Chicken</a></td>
-                        <td valign="top"><a href="#dessert">🎂 Dessert</a></td>
+                        <td>
+                            <!-- Middle Frame: Wood Edge -->
+                            <table border="0" cellpadding="5" cellspacing="1" width="100%">
+                                <tr>
+                                    <td bgcolor="#8B4513">
+                                        <!-- Inner Content Area -->
+                                        <table border="0" cellpadding="10" cellspacing="5" width="100%" bgcolor="#EADDCA">
+                                        
+                                            <!-- Row 1: Bread, Salads, Seafood -->
+                                            <tr>
+                                                <td width="33%" bgcolor="#FAF9F6" align="center" valign="top">
+                                                    <br><font size="6">🍞</font><br>
+                                                    <a href="#bread"><font face="Verdana" size="2" color="#8B4513"><b>BREADS</b></font></a><br>
+                                                    <font face="Courier New" size="1" color="#666666"><i>Yeast & Doughs</i></font><br>&nbsp;
+                                                </td>
+                                                <td width="33%" bgcolor="#FAF9F6" align="center" valign="top">
+                                                    <br><font size="6">🥗</font><br>
+                                                    <a href="#salad"><font face="Verdana" size="2" color="#8B4513"><b>SALADS</b></font></a><br>
+                                                    <font face="Courier New" size="1" color="#666666"><i>Fresh Greens</i></font><br>&nbsp;
+                                                </td>
+                                                <td width="33%" bgcolor="#FAF9F6" align="center" valign="top">
+                                                    <br><font size="6">🐟</font><br>
+                                                    <a href="#seafood"><font face="Verdana" size="2" color="#8B4513"><b>SEAFOOD</b></font></a><br>
+                                                    <font face="Courier New" size="1" color="#666666"><i>Fresh Catch</i></font><br>&nbsp;
+                                                </td>
+                                            </tr>
+                                            <!-- Row 2: Eggs, Pasta, Beef -->
+                                            <tr>
+                                                <td bgcolor="#FAF9F6" align="center" valign="top">
+                                                    <br><font size="6">🍳</font><br>
+                                                    <a href="#eggs"><font face="Verdana" size="2" color="#8B4513"><b>EGGS</b></font></a><br>
+                                                    <font face="Courier New" size="1" color="#666666"><i>Breakfast</i></font><br>&nbsp;
+                                                </td>
+                                                <td bgcolor="#FAF9F6" align="center" valign="top">
+                                                    <br><font size="6">🍝</font><br>
+                                                    <a href="#pasta"><font face="Verdana" size="2" color="#8B4513"><b>PASTA</b></font></a><br>
+                                                    <font face="Courier New" size="1" color="#666666"><i>Italian Style</i></font><br>&nbsp;
+                                                </td>
+                                                <td bgcolor="#FAF9F6" align="center" valign="top">
+                                                    <br><font size="6">🐄</font><br>
+                                                    <a href="#beef"><font face="Verdana" size="2" color="#8B4513"><b>BEEF</b></font></a><br>
+                                                    <font face="Courier New" size="1" color="#666666"><i>Hearty Meats</i></font><br>&nbsp;
+                                                </td>
+                                            </tr>
+                                            <!-- Row 3: Potatoes, Sides, Pork -->
+                                            <tr>
+                                                <td bgcolor="#FAF9F6" align="center" valign="top">
+                                                    <br><font size="6">🥔</font><br>
+                                                    <a href="#potato"><font face="Verdana" size="2" color="#8B4513"><b>POTATOES</b></font></a><br>
+                                                    <font face="Courier New" size="1" color="#666666"><i>Spuds & Mash</i></font><br>&nbsp;
+                                                </td>
+                                                <td bgcolor="#FAF9F6" align="center" valign="top">
+                                                    <br><font size="6">🥡</font><br>
+                                                    <a href="#sides"><font face="Verdana" size="2" color="#8B4513"><b>SIDES</b></font></a><br>
+                                                    <font face="Courier New" size="1" color="#666666"><i>Vegetables</i></font><br>&nbsp;
+                                                </td>
+                                                <td bgcolor="#FAF9F6" align="center" valign="top">
+                                                    <br><font size="6">🐖</font><br>
+                                                    <a href="#pork"><font face="Verdana" size="2" color="#8B4513"><b>PORK</b></font></a><br>
+                                                    <font face="Courier New" size="1" color="#666666"><i>Roasts & Chops</i></font><br>&nbsp;
+                                                </td>
+                                            </tr>
+                                            <!-- Row 4: Soups, Chicken, Desserts -->
+                                            <tr>
+                                                <td bgcolor="#FAF9F6" align="center" valign="top">
+                                                    <br><font size="6">🥘</font><br>
+                                                    <a href="#soup"><font face="Verdana" size="2" color="#8B4513"><b>SOUPS</b></font></a><br>
+                                                    <font face="Courier New" size="1" color="#666666"><i>Warm Bowls</i></font><br>&nbsp;
+                                                </td>
+                                                <td bgcolor="#FAF9F6" align="center" valign="top">
+                                                    <br><font size="6">🐓</font><br>
+                                                    <a href="#chicken"><font face="Verdana" size="2" color="#8B4513"><b>CHICKEN</b></font></a><br>
+                                                    <font face="Courier New" size="1" color="#666666"><i>Poultry</i></font><br>&nbsp;
+                                                </td>
+                                                <td bgcolor="#FAF9F6" align="center" valign="top">
+                                                    <br><font size="6">🎂</font><br>
+                                                    <a href="#dessert"><font face="Verdana" size="2" color="#8B4513"><b>DESSERTS</b></font></a><br>
+                                                    <font face="Courier New" size="1" color="#666666"><i>Sweet Treats</i></font><br>&nbsp;
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
                     </tr>
                 </table>
-            </center>        
+            </center>
         </nav>
     </header>
     <br>
-    <main>
-        <section id="bread">
-            <hr><h2>🍞 Bread 🍞</h2><hr>
-            <article>
-                <details><summary><strong>Loaf Pan Bread</strong></summary>
-                    <ul>
-                        <li>2 cups warm water</li>
-                        <li>1 tbsp active dry yeast</li>
-                        <li>¼ cup sugar</li>
-                        <li>2 tsp salt</li>
-                        <li>2 tbsp vegetable oil</li>
-                        <li>4-5½ cups bread flour</li>
-                        <li>Butter for brushing</li>
-                    </ul>
-                    <figure>
-                        <img src="images/bread/bread-loafpan.jpg" width="200" height="150" loading="lazy" alt="Loaf Pan Bread">
-                    </figure>
-                    <ol>
-                        <li>Combine water, yeast and a pinch of sugar in a large bowl.</li>
-                        <li>Allow to rest for 5-10 minutes, until foaming.</li>
-                        <li>Add remaining sugar, salt, oil and 3 cups of flour, mixing to combine.</li>
-                        <li>Add another cup of flour and mix to combine, continuing to add more, ½ cup at a time, until the dough begins to pull away from the sides of the bowl.</li>
-                        <li>The dough should be smooth and elastic and slightly stick to a clean finger, but not be overly sticky. Add a little more flour if needed.</li>
-                        <li>Mix the dough for 5 minutes on a lightly floured surface.</li>
-                        <li>Grease a large bowl with oil and place the dough inside, turning to coat.</li>
-                        <li>Cover with a dish towel or plastic wrap and allow to rise in a warm place until doubled in size, about 1 ½ hours.</li>
-                        <li>Oil two 9x5" bread pans generously and add a small piece of parchment paper at the bottom if the pan sticks.</li>
-                        <li>Punch the dough down well to remove air bubbles, shape into two long logs and place into prepared loaf pans.</li>
-                        <li>Cover loosely with plastic wrap and allow dough to rise again until an inch above the top of the pan, about 45 minutes.</li>
-                        <li>Remove plastic wrap and preheat oven to 350°F.</li>
-                        <li>Bake for about 30 minutes or until golden brown on top - should sound hollow when tapped.</li>
-                        <li>Invert loaves onto wire cooling rack and brush tops with butter.</li>
-                        <li>Allow to cool for 10 minutes before slicing, then store in an airtight container.</li>
-                    </ol>
-                    <p><em>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://tastesbetterfromscratch.com/bread-recipe/">Original Source</a></em></p>
-                </details>
-            </article>
-        </section>
-        <section id="eggs">
-            <hr><h2>🍳 Eggs 🍳</h2><hr>
-            <article>
-                <details><summary><strong>Deviled Eggs</strong></summary>
-                    <ul>
-                        <li>12 eggs</li>
-                        <li>3 tsp dijon mustard</li>
-                        <li>⅓ cup mayonnaise</li>
-                        <li>1 tbsp butter</li>
-                        <li>1 tbsp lemon juice</li>
-                        <li>1 tbsp minced shallot / onion</li>
-                        <li>1 tsp sugar</li>
-                        <li>⅛ tsp salt</li>
-                        <li>⅛ tsp pepper</li>
-                        <li>¼ tsp tabasco sauce</li>
-                        <li>Paprika, chives, pickle juice (for garnish/flavor)</li>
-                    </ul>
-                    <figure>
-                        <img src="images/eggs/eggs-deviled.jpeg" alt="Deviled Eggs" width="150" height="100" loading="lazy">
-                    </figure>
-                    <ol>
-                        <li>Place eggs in a large saucepan and cover with water. </li>
-                        <li>Transfer to stovetop over high heat until water begins to boil.</li>
-                        <li>Boil for one minute, cover with lid, and remove from heat.  Allow to sit for 17 minutes and then drain and transfer to an ice bath. </li>
-                        <li>Peel eggs and set aside.</li>
-                        <li>Slice each egg in half lengthwise and gently remove yolk halves into small mixing bowl.  Arrange egg whites on serving platter.</li>
-                        <li>Use a fork to mash the yolks together with mustard, mayonnaise, butter, lemon juice, shallot/onion, sugar, salt, pepper, and tabasco.</li>
-                        <li>Add mayonnaise as necessary to get desired creamy consistency, then piping bag or spoon mixture back into egg halves.</li>
-                        <li>Sprinkle with paprika and chives. Add a dash of pickle juice if desired. Let settle.</li>
-                    </ol>
-                    <p><em>&nbsp;&nbsp;&nbsp;&nbsp;Source: </em></p>
-                </details>
-            </article>
-        </section>
+        <main>
+            <section id="bread">
+                <hr><h2>🍞 Bread 🍞</h2><hr>
+                <article>
+                    <details><summary><strong>Crusty No-Knead</strong></summary>
+                        <figure>
+                            <img src="images/bread/bread-dutchoven.jpg" alt="Dutch Oven Bread" width="150" height="100" loading="lazy">
+                        </figure>
+                        <p>The simplest way to have fresh bread within a couple of hours. Recipe is forgiving so don’t fret if things don’t go perfectly, it will be salvageable.</p>
+                        <ul>
+                            <li>2 tsp active dry yeast</li>
+                            <li>2 tsp kosher salt</li>
+                            <li>1½ cups very warm tap water</li>
+                            <li>3 cups bread flour</li>
+                        </ul>
+                        <ol>
+                            <li>Whisk yeast and salt in a large bowl with warm water.</li>
+                            <li>Add in all the flour at once and stir until a sticky dough forms.</li>
+                            <li>Cover with a kitchen towel and leave for 2-3 hours to rise until doubled in size.</li>
+                            <li>Preheat oven to 450°F with Dutch oven inside and lid on.</li>
+                            <li>Dust dough with flour and form it into a ball on parchment paper.</li>
+                            <li>Lift paper and dough into Dutch oven and return to oven.</li>
+                            <li>Bake 30 minutes covered, then 12 minutes uncovered.</li>
+                            <li>Remove and place on cooling rack for at least 10 minutes before slicing.</li>
+                        </ol>
+                        <p><em>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.recipetineats.com/easy-yeast-bread-recipe-no-knead/">Original Source</a></em></p>
+                    </details>
+                </article>
+                <article>
+                    <details><summary><strong>Pizza Dough</strong></summary>
+                        <ul>
+                            <li>1 cup water, warmed</li>
+                            <li>1 tsp instant yeast</li>
+                            <li>1 tsp sugar</li>
+                            <li>2 cups all-purpose flour</li>
+                            <li>1 tsp salt</li>
+                        </ul>
+                        <ol>
+                            <li>Combine water, yeast, and sugar in medium bowl. Let stand until the mixture foams on top - about 5 minutes.</li>
+                            <li>In the meantime, combine flour and salt. Once yeast mixture is foamy, mix it into the flour mixture.</li>
+                            <li>Knead combination on floured surface, then place in lightly oiled bowl and cover with a clean cloth.</li>
+                            <li>Let the dough rise - about 30 minutes - then cut the dough in half.</li>
+                            <li>Use or bag each portion for later use.</li>
+                            <li><strong>Pizza Stone </strong></li>
+                            <li>Preheat oven to 500°F.</li>
+                            <li>Place stone on the lowest rack for 30 minutes while preheating.</li>
+                            <li>Dust stone with flour before placing pizza on stone.</li>
+                        </ol>
+                        <p><em>&nbsp;&nbsp;&nbsp;&nbsp;Source: </em></p>
+                    </details>
+                </article>
+            </section>
+            <section id="eggs">
+                <hr><h2>🍳 Eggs 🍳</h2><hr>
+                <article>
+                    <details><summary><strong>Deviled Eggs</strong></summary>
+                        <figure>
+                            <img src="images/eggs/eggs-deviled.jpeg" alt="Deviled Eggs" width="150" height="100" loading="lazy">
+                        </figure>
+                        <ul>
+                            <li>12 eggs</li>
+                            <li>3 tsp dijon mustard</li>
+                            <li>⅓ cup mayonnaise</li>
+                            <li>1 tbsp butter</li>
+                            <li>1 tbsp lemon juice</li>
+                            <li>1 tbsp minced shallot / onion</li>
+                            <li>1 tsp sugar</li>
+                            <li>⅛ tsp salt</li>
+                            <li>⅛ tsp pepper</li>
+                            <li>¼ tsp tabasco sauce</li>
+                            <li>Paprika, chives, pickle juice (for garnish/flavor)</li>
+                        </ul>
+                        <ol>
+                            <li>Place eggs in a large saucepan and cover with water. </li>
+                            <li>Transfer to stovetop over high heat until water begins to boil.</li>
+                            <li>Boil for one minute, cover with lid, and remove from heat.  Allow to sit for 17 minutes and then drain and transfer to an ice bath. </li>
+                            <li>Peel eggs and set aside.</li>
+                            <li>Slice each egg in half lengthwise and gently remove yolk halves into small mixing bowl.  Arrange egg whites on serving platter.</li>
+                            <li>Use a fork to mash the yolks together with mustard, mayonnaise, butter, lemon juice, shallot/onion, sugar, salt, pepper, and tabasco.</li>
+                            <li>Add mayonnaise as necessary to get desired creamy consistency, then piping bag or spoon mixture back into egg halves.</li>
+                            <li>Sprinkle with paprika and chives. Add a dash of pickle juice if desired. Let settle.</li>
+                        </ol>
+                        <p><em>&nbsp;&nbsp;&nbsp;&nbsp;Source: </em></p>
+                    </details>
+                </article>
+            </section>
     </main>
 </body>
 </html>
