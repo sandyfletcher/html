@@ -4,7 +4,7 @@ A home recipe book that doubles as a showcase of what HTML alone can do.
 
 **The one rule:** the site is pure HTML. No CSS (not even a `style` attribute), no JavaScript, no build step. Every visual and interactive effect comes from HTML elements and attributes, including old presentational ones that browsers still honour.
 
-Live at [html.sandyfletcher.ca](https://html.sandyfletcher.ca/).
+Live at [html.sandyfletcher.ca](https://html.sandyfletcher.ca/). Currently on GitHub Pages; moving to Netlify as a subdomain of sandyfletcher.ca.
 
 ---
 
@@ -59,13 +59,12 @@ Live at [html.sandyfletcher.ca](https://html.sandyfletcher.ca/).
 Links can't drop their underline without CSS, but the underline is drawn in the **link's** colour (the `<body link>` value) while the text can be recoloured with an inner `<font color>`. The link colour (`#EADDCA`) is set to match the backgrounds the links sit on. The nav cells and in-text links therefore show coloured text with an underline that blends in.
 
 ### Motion
-- **Nested `<marquee>`s** make the bouncing kitchenware:
+- **Nested `<marquee>`s** make the bouncing reminder under the header:
   - An outer `direction="right" behavior="alternate"` marquee moves left and right.
-  - Inside it, a `direction="down" behavior="alternate"` marquee moves up and down.
+  - Inside it, a `direction="down" behavior="alternate"` marquee carries the text and moves up and down.
   - Together they give the diagonal bounce of the old DVD logo.
-  - Two pairs run in half-width cells at different `scrollamount`s, so the icons move independently.
-- The bounce strip has `aria-hidden="true"` so screen readers skip the decoration.
-- **Caveat:** marquees can't be paused without JavaScript, so motion is kept decorative and the important text (the staples note) sits still.
+- The inner marquee is a fixed `width="330"` and the line is split with `<br>`, so the block fits even a 360px phone without clipping.
+- **Caveat:** marquees can't be paused without JavaScript, so the reminder stays short.
 
 ### Recipe anatomy
 Each recipe follows `templaterecipe.html`:
@@ -82,9 +81,10 @@ Each recipe follows `templaterecipe.html`:
 
 ### Graphics made for the site
 - `images/tablecloth.webp`:
-  - A 640×640 gingham tile in the site's palette, with faint linen noise and a few marks: coffee ring, part of a pot ring, a tomato splash, an oil smudge, crumbs and herb flecks.
-  - Marks crossing an edge continue on the opposite side, so the tile repeats without seams.
-  - At 640px it repeats about twice across a desktop screen.
+  - A 1200×1200 gingham tile in the site's palette, with faint linen noise and a few marks: coffee rings, part of a pot ring, a tomato splash, oil smudges, crumbs and herb flecks.
+  - Soft, uneven fading makes each square 10–55% paler than its own colour, never mixing it with its neighbours. Text stays readable and the cloth looks sun-worn rather than printed.
+  - Marks and fading that cross an edge continue on the opposite side, so the tile repeats without seams.
+  - At 1200px it repeats about once across a desktop screen. It is saved as lossless WebP (about 160 KB) because lossy compression smears the square edges.
 - `images/view-original-recipe.png`: the source button.
 
 ---
@@ -111,10 +111,10 @@ magick input.jpg -auto-orient -strip -resize 320x320 -quality 82 output.webp
 ## TODO
 
 - [ ] **Republish as a fresh repository** to drop all earlier history, including the full-size photos that contained GPS coordinates:
-  - [ ] In a new folder, copy only the current files (no `.git`, no `.jpg` photos, no `preview-*.html`).
+  - [ ] In a new folder, copy only the current files (no `.git`, no `.jpg` photos except `images/share.jpg`, no `preview-*.html`, no `images/tablecloth.png`).
   - [ ] Check the copy: `index.html`, `CNAME`, `README.md`, `images/` (WebP photos, `chef.ico`, `share.jpg`, `tablecloth.webp`, `view-original-recipe.png`), plus `templaterecipe.html` / `thorough.html` while they're still needed.
   - [ ] Delete the old GitHub repository. Force-pushing a fresh branch isn't enough, because old commits can stay reachable by their hash.
-  - [ ] Create a new repository, `git init`, commit, push, re-enable GitHub Pages, and confirm the custom domain.
+  - [ ] Create a new repository, `git init`, commit, push, and connect it to the host (see *Move to Netlify* below).
   - [ ] Check for forks of the old repository. Deleting it doesn't remove forks.
 - [ ] **Move recipes over from `thorough.html`** into the standard format, then delete `thorough.html`.
 - [ ] Decide whether `templaterecipe.html` stays (outside the published site) or goes once migration is done.
@@ -124,12 +124,13 @@ magick input.jpg -auto-orient -strip -resize 320x320 -quality 82 output.webp
 - [ ] **Braised pot roast photos**: the page points to `images/potroast/*.jpg`, which don't exist.
 - [ ] **Replace placeholder tips** (LLM-written) with real ones, or remove the box.
 - [ ] **Add sources** where they exist: crusty no-knead, potato salad, roasted tomato, pineapple guacamole, butter chicken, braised pot roast, firecracker shrimp, banana bread (book: use Open Library).
-- [ ] **Tofu bánh mì category**: it currently sits under EGGS. Consider renaming the section "EGGS & TOFU", which matches the source book's chapter.
 - [ ] **Metric conversions on phones**: `<abbr>` only works on hover. Options:
   - Show the conversion inline in `<small>`.
   - Use the HTML `popover` attribute, which works on tap but shows the browser's default button look.
-- [ ] Delete `preview-bounce.html`, `preview-filmstrip.html`, `preview-tablecloth.html` and the unused `images/tablecloth.png`.
-- [ ] **GitHub Pages renders `README.md`** into a page on the live site by default. If that's unwanted, add an empty `.nojekyll` file (the README is then served as plain text) or keep the README out of the published branch.
+- [ ] **Move to Netlify** (subdomain of sandyfletcher.ca):
+  - [ ] Netlify publishes every file in its publish directory, so `README.md`, `templaterecipe.html` and anything else in the repo would be downloadable. Consider moving the site files (`index.html`, `images/`) into a folder such as `site/` and setting that as the publish directory in Netlify's settings. That keeps the README and working files in the repo but off the live site.
+  - [ ] Set the custom domain in Netlify's dashboard. `CNAME` is a GitHub Pages file and can be deleted after the move.
+  - [ ] Keep the domain `html.sandyfletcher.ca`, or update `og:url` and `og:image` in `index.html` to the new address. Link previews need absolute URLs.
 - [ ] Run the W3C Link Checker on the live site after republishing.
 - [ ] Ideas to consider:
   - Ingredient checklists with `<label><input type="checkbox">`, which keep their ticks with no JavaScript.
