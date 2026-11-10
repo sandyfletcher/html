@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- PREVIEW ONLY: not part of the site -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Recipes</title>
+    <link rel="icon" type="image/x-icon" href="images/chef.ico">
+    <meta name="description" content="A home cookbook built entirely in HTML, the simple system holding the web together.">
+    <meta name="theme-color" content="#8B4513">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Digital Cookbook">
+    <meta property="og:title" content="Digital Cookbook">
+    <meta property="og:description" content="A home cookbook built entirely in HTML, the simple system holding the web together.">
+    <meta property="og:url" content="https://html.sandyfletcher.ca/">
+    <meta property="og:image" content="https://html.sandyfletcher.ca/images/share.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Steam-boiled eggs, halved">
+    <meta name="twitter:card" content="summary_large_image">
+</head>
+<body background="images/tablecloth.png" bgcolor="#F5F5DC" link="#EADDCA" vlink="#EADDCA" alink="#FFD700">
+    <header>
+        <center>
+            <!-- thick outer frame -->
+            <table width="97%" border="0" cellspacing="0" cellpadding="4" bgcolor="#4A2C2A">
+                <tr>
+                    <td>
+                        <!-- actual header box -->
+                        <table width="100%" border="0" cellspacing="0" cellpadding="16" bgcolor="#8B4513">
+                            <tr>
+                                <td align="center">
+                                    <!-- each <small> shrinks the h1's built-in margins, keeping the title snug to its subtitle -->
+                                    <font size="1"><small><small><small><small><small><small><h1><font size="7" face="Georgia, Times New Roman, serif" color="#FFFFFF">
+                                        <b><i>DIGITAL COOKBOOK</i></b>
+                                    </font></h1></small></small></small></small></small></small></font>
+                                    <font size="4" face="Verdana, Arial, sans-serif" color="#FFD700">
+                                        <tt>SHOWCASING THE CAPABILITIES OF HTML</tt>
+                                    </font>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <!-- scrolling news ticker -->
+            <table width="97%" border="0" cellspacing="0" cellpadding="5">
+                <tr>
+                    <td bgcolor="#FFE4B5">
+                        <marquee behavior="alternate" scrollamount="6" direction="left">
+                            <font face="Courier New" size="2" color="#8B4513">
+                                Recipe formatting assumes you already have kitchen staples; please ensure you've read the instructions thoroughly before starting!
+                            </font>
+                        </marquee>
+                    </td>
+                </tr>
+            </table>
+        </center>
+        <!-- table of contents -->
+        <nav>
+            <center>
+                <table border="0" cellpadding="0" cellspacing="0" width="97%" bgcolor="#4B2C20">
+                    <tr>
+                        <td>
+                            <table border="0" cellpadding="5" cellspacing="1" width="100%">
+                                <tr>
+                                    <td bgcolor="#8B4513">
+                                        <table border="0" cellpadding="6" cellspacing="3" width="100%" bgcolor="#FAF9F6">
+                                            <tr>
+                                                <td width="16.66%" bgcolor="#EADDCA" align="center">
+                                                    <a href="#eggs" title="Eggs"><font size="5" color="#EADDCA">🍳</font><br><font size="1" color="#8B4513" face="Verdana, sans-serif">EGGS</font></a>
+                                                </td>
+                                                <td width="16.66%" bgcolor="#EADDCA" align="center">
+                                                    <a href="#bread" title="Bread"><font size="5" color="#EADDCA">🍞</font><br><font size="1" color="#8B4513" face="Verdana, sans-serif">BREAD</font></a>
+                                                </td>
+                                                <td width="16.66%" bgcolor="#EADDCA" align="center">
+                                                    <a href="#potato" title="Potato"><font size="5" color="#EADDCA">🥔</font><br><font size="1" color="#8B4513" face="Verdana, sans-serif">POTATO</font></a>
+                                                </td>
+                                                <td width="16.66%" bgcolor="#EADDCA" align="center">
+                                                    <a href="#soup" title="Soup"><font size="5" color="#EADDCA">🥘</font><br><font size="1" color="#8B4513" face="Verdana, sans-serif">SOUP</font></a>
+                                                </td>
+                                                <td width="16.66%" bgcolor="#EADDCA" align="center">
+                                                    <a href="#salad" title="Salad"><font size="5" color="#EADDCA">🥗</font><br><font size="1" color="#8B4513" face="Verdana, sans-serif">SALAD</font></a>
+                                                </td>
+                                                <td width="16.66%" bgcolor="#EADDCA" align="center">
+                                                    <a href="#sides" title="Sides"><font size="5" color="#EADDCA">🥡</font><br><font size="1" color="#8B4513" face="Verdana, sans-serif">SIDES</font></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td bgcolor="#EADDCA" align="center">
+                                                    <a href="#pasta" title="Pasta"><font size="5" color="#EADDCA">🍝</font><br><font size="1" color="#8B4513" face="Verdana, sans-serif">PASTA</font></a>
+                                                </td>
+                                                <td bgcolor="#EADDCA" align="center">
+                                                    <a href="#chicken" title="Chicken"><font size="5" color="#EADDCA">🐓</font><br><font size="1" color="#8B4513" face="Verdana, sans-serif">CHICKEN</font></a>
+                                                </td>
+                                                <td bgcolor="#EADDCA" align="center">
+                                                    <a href="#pork" title="Pork"><font size="5" color="#EADDCA">🐖</font><br><font size="1" color="#8B4513" face="Verdana, sans-serif">PORK</font></a>
+                                                </td>
+                                                <td bgcolor="#EADDCA" align="center">
+                                                    <a href="#beef" title="Beef"><font size="5" color="#EADDCA">🐄</font><br><font size="1" color="#8B4513" face="Verdana, sans-serif">BEEF</font></a>
+                                                </td>
+                                                <td bgcolor="#EADDCA" align="center">
+                                                    <a href="#seafood" title="Seafood"><font size="5" color="#EADDCA">🐟</font><br><font size="1" color="#8B4513" face="Verdana, sans-serif">SEAFOOD</font></a>
+                                                </td>
+                                                <td bgcolor="#EADDCA" align="center">
+                                                    <a href="#dessert" title="Dessert"><font size="5" color="#EADDCA">🎂</font><br><font size="1" color="#8B4513" face="Verdana, sans-serif">DESSERT</font></a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </center>
+        </nav>
+    </header>
+    <main>
+        <!-- EGGS SECTION -->
+        <section id="eggs">
+            <!-- Header -->
+            <br>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#4A2C2A">
+                <tr>
+                    <td align="center">
+                        <font size="1"><small><h2><font face="Georgia, serif" size="6" color="#FFD700">
+                            &nbsp;🍳 <b>EGGS</b> 🍳
+                        </font></h2></small></font>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <!-- Tofu Banh Mi -->
+            <article id="tofu-banh-mi">
+                <details>
+                    <summary>
+                        <font face="Georgia, serif" size="4" color="#8B4513">
+                            <b><i>TOFU BÁNH MÌ</i></b>
+                        </font>
+                    </summary>
+                    <br>
+                    <center>
+                        <table width="90%" border="0" cellspacing="0" cellpadding="5">
+                            <tr>
+                                <td align="center" bgcolor="#FFE4B5">
+                                    <font face="Courier New, monospace" size="2" color="#8B4513">
+                                        <b>TIP:</b> Draining the sliced tofu thoroughly on paper towels is essential—removing excess surface moisture lets the cornstarch create a delicate, crispy crust without deep-frying.
+                                    </font>
+                                </td>
+                            </tr>
+                        </table>
+                    </center>
+                    <br>
+                    <fieldset>
+                        <legend align="center">
+                            <font color="#808080" face="Courier New, monospace" size="3">
+                                <b>&nbsp;I N G R E D I E N T S&nbsp;</b>
+                            </font>
+                        </legend>
+                        <font face="Georgia, serif" size="2">
+                            <ul>
+                                <li><abbr title="~400g">1 (14 oz) block</abbr> extra-firm tofu, drained and sliced into 8 slabs</li>
+                                <li>Salt and freshly ground black pepper</li>
+                                <li>2 carrots, peeled and shredded</li>
+                                <li>1 small cucumber, halved lengthwise, seeded, and thinly sliced</li>
+                                <li><abbr title="~30ml">2 tbsp</abbr> lime juice + <abbr title="~1.5g">½ tsp</abbr> grated lime zest</li>
+                                <li><abbr title="~15ml">1 tbsp</abbr> vegan fish sauce (or soy sauce / tamari)</li>
+                                <li><abbr title="~80ml">⅓ cup</abbr> mayonnaise (or vegan mayo)</li>
+                                <li>1–2 tsp Sriracha</li>
+                                <li><abbr title="~32g">¼ cup</abbr> cornstarch</li>
+                                <li><abbr title="~45ml">3 tbsp</abbr> high-heat vegetable oil</li>
+                                <li>4 <abbr title="~15cm">6-inch</abbr> soft baguette rolls, split lengthwise and toasted</li>
+                                <li><abbr title="~15g">½ cup</abbr> fresh cilantro leaves</li>
+                            </ul>
+                        </font>
+                    </fieldset>
+                    <br>
+                    <font face="Courier New, monospace" size="2">
+                        <table border="0" cellpadding="1" cellspacing="0" width="100%">
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>1&nbsp;</b></font></td>
+                                <td valign="top">Arrange tofu slices in a single layer on a paper towel–lined baking sheet and let drain for 20 minutes. Gently press dry with additional towels, then season with salt and pepper.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>2&nbsp;</b></font></td>
+                                <td valign="top">In a medium bowl, toss shredded carrots, cucumber, lime juice, and vegan fish sauce (or soy sauce); let sit for 15 minutes to quick-pickle. In a separate small bowl, whisk mayonnaise, Sriracha, and lime zest.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>3&nbsp;</b></font></td>
+                                <td valign="top">Spread cornstarch in a shallow dish and dredge seasoned tofu slices, tapping off any excess.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>4&nbsp;</b></font></td>
+                                <td valign="top">Heat oil in a 12-inch nonstick skillet over medium-high heat until shimmering. Add tofu and fry until crisp and golden brown (about 4 minutes per side), then transfer to a paper towel–lined plate.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>5&nbsp;</b></font></td>
+                                <td valign="top">Spread spicy mayonnaise evenly over cut sides of toasted rolls. Layer in crispy tofu slabs, drained pickled vegetables, and fresh cilantro, then close and serve immediately.</td>
+                            </tr>
+                        </table>
+                    </font>
+                    <br>
+                    <center>
+                        <img src="https://placehold.co/160x160/8B4513/FFFFFF?text=Drain+Tofu" width="160" height="160" hspace="4" vspace="4" border="2" alt="Drain Tofu" loading="lazy">
+                        <img src="https://placehold.co/160x160/8B4513/FFFFFF?text=Quick+Pickle" width="160" height="160" hspace="4" vspace="4" border="2" alt="Quick Pickle" loading="lazy">
+                        <img src="https://placehold.co/160x160/8B4513/FFFFFF?text=Pan+Fry" width="160" height="160" hspace="4" vspace="4" border="2" alt="Pan Fry" loading="lazy">
+                        <img src="https://placehold.co/160x160/8B4513/FFFFFF?text=Assemble" width="160" height="160" hspace="4" vspace="4" border="2" alt="Assemble" loading="lazy">
+                    </center>
+                    <center>
+                        <a href="https://www.americastestkitchen.com/recipes/11698-tofu-banh-mi" target="_blank">
+                            <img src="images/view-original-recipe.png" width="340" height="40" border="0" alt="View Original Recipe">
+                        </a>
+                    </center>
+                </details>
+            </article>
+            <!-- Boiled Eggs -->
+            <article id="steam-boiled">
+                <details>
+                    <summary>
+                        <font face="Georgia, serif" size="4" color="#8B4513">
+                            <b><i>STEAM-BOILED</i></b>
+                        </font>
+                    </summary>
+                    <br id="steam-boiled-recipe">
+                    <center>
+                        <table width="90%" border="0" cellspacing="0" cellpadding="5">
+                            <tr>
+                                <td align="center" bgcolor="#FFE4B5">
+                                    <font face="Courier New, monospace" size="2" color="#8B4513">
+                                        If your eggs are refrigerated, add an extra minute to the steaming time.
+                                    </font>
+                                </td>
+                            </tr>
+                        </table>
+                    </center>
+                    <br>
+                    <fieldset>
+                        <legend align="center">
+                            <font color="#808080" face="Courier New, monospace" size="3">
+                                <b>&nbsp;I N G R E D I E N T S&nbsp;</b>
+                            </font>
+                        </legend>
+                        <font face="Georgia, serif" size="2">
+                            <ul>
+                                <li>6 eggs</li>
+                            </ul>
+                        </font>
+                    </fieldset>
+                    <br>
+                    <font face="Courier New, monospace" size="2">
+                        <table border="0" cellpadding="1" cellspacing="0" width="100%">
+                            <tr>
+                                <td valign="top" align="right" ><font size="3" color="#DAA520"><b>1&nbsp;</b></font></td>
+                                <td valign="top">Add about <abbr title="~2½ cm">an inch</abbr> of water to a pot and place an expanding steamer ring inside.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>2&nbsp;</b></font></td>
+                                <td valign="top">Place the pot over high heat, cover, and bring the water to a rolling boil.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>3&nbsp;</b></font></td>
+                                <td valign="top">Carefully place the eggs into the steamer basket - or directly into the water if you don't have one - then cover and reduce heat to medium-high.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>4&nbsp;</b></font></td>
+                                <td valign="top">Cook for 6½ mins for a runny yolk, 8 mins for jammy yolk, or 12 mins for firm.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>5&nbsp;</b></font></td>
+                                <td valign="top">Immediately transfer eggs to an ice bath for 5 minutes to stop the cooking process, then peel and serve.</td>
+                            </tr>
+                        </table>
+                    </font>
+                    <br>
+                    <center>
+                        <img src="images/egg/steamboiled1.webp" width="160" height="160" hspace="4" vspace="4" border="2" alt="Pot and steamer" loading="lazy">
+                        <img src="images/egg/steamboiled2.webp" width="160" height="160" hspace="4" vspace="4" border="2" alt="Eggs after steaming" loading="lazy">
+                        <img src="images/egg/steamboiled3.webp" width="160" height="160" hspace="4" vspace="4" border="2" alt="Eggs in ice bath" loading="lazy">
+                        <img src="images/egg/steamboiled4.webp" width="160" height="160" hspace="4" vspace="4" border="2" alt="Eggs after cooking" loading="lazy">
+                    </center>
+                    <center>
+                        <a href="https://openlibrary.org/isbn/9781948703864" target="_blank">
+                            <img src="images/view-original-recipe.png" width="340" height="40" border="0" alt="View Original Recipe">
+                        </a>
+                    </center>
+                </details>
+            </article>
+        </section>
+        <!-- BREAD SECTION -->
+        <section id="bread">
+            <!-- Header -->
+            <br>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#4A2C2A">
+                <tr>
+                    <td align="center">
+                        <font size="1"><small><h2><font face="Georgia, serif" size="6" color="#FFD700">
+                            &nbsp;🍞 <b>BREAD</b> 🍞
+                        </font></h2></small></font>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <!-- Crusty No-Knead -->
+            <article id="crusty-no-knead">
+                <details>
+                    <summary>
+                        <font face="Georgia, serif" size="4" color="#8B4513">
+                            <b><i>CRUSTY NO-KNEAD</i></b>
+                        </font>
+                    </summary>
+                    <br>
+                    <center>
+                        <table width="90%" border="0" cellspacing="0" cellpadding="5">
+                            <tr>
+                                <td align="center" bgcolor="#FFE4B5">
+                                    <font face="Courier New, monospace" size="2" color="#8B4513">
+                                        If you don't have a Dutch Oven, you'll lose the trapped steam and the delicious crust.  Still edible!
+                                    </font>
+                                </td>
+                            </tr>
+                        </table>
+                    </center>
+                    <br>
+                    <fieldset>
+                        <legend align="center">
+                            <font color="#808080" face="Courier New, monospace" size="3">
+                                <b>&nbsp;I N G R E D I E N T S&nbsp;</b>
+                            </font>
+                        </legend>
+                        <font face="Georgia, serif" size="2">
+                            <ul>
+                                <li>2 tsp active dry yeast</li>
+                                <li>2 tsp kosher salt</li>
+                                <li>1½ cups very warm tap water</li>
+                                <li>3 cups bread flour</li>
+                            </ul>
+                        </font>
+                    </fieldset>
+                    <br>
+                    <font face="Courier New, monospace" size="2">
+                        <table border="0" cellpadding="1" cellspacing="0" width="100%">
+                            <tr>
+                                <td valign="top" align="right" ><font size="3" color="#DAA520"><b>1&nbsp;</b></font></td>
+                                <td valign="top">Whisk yeast and salt in a large bowl with warm water.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>2&nbsp;</b></font></td>
+                                <td valign="top">Add in all the flour at once and stir until a sticky dough forms.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>3&nbsp;</b></font></td>
+                                <td valign="top">Cover with a kitchen towel and leave for 2-3 hours to rise until doubled in size.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>4&nbsp;</b></font></td>
+                                <td valign="top">Preheat oven to 450°F with Dutch oven inside and lid on.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>5&nbsp;</b></font></td>
+                                <td valign="top">Dust dough with flour and form it into a ball on parchment paper.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>6&nbsp;</b></font></td>
+                                <td valign="top">Lift paper and dough into Dutch oven and return to oven.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>7&nbsp;</b></font></td>
+                                <td valign="top">Bake 30 minutes covered, then 12 minutes uncovered.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>8&nbsp;</b></font></td>
+                                <td valign="top">Remove and place on cooling rack for at least 10 minutes before slicing.</td>
+                            </tr>
+                        </table>
+                    </font>
+                    <br>
+                    <center>
+                        <img src="images/bread/nokneadcrusty1.webp" width="160" height="160" hspace="4" vspace="4" border="2" alt="Step 1" loading="lazy">
+                        <img src="images/bread/nokneadcrusty2.webp" width="160" height="160" hspace="4" vspace="4" border="2" alt="Step 2" loading="lazy">
+                        <img src="images/bread/nokneadcrusty3.webp" width="160" height="160" hspace="4" vspace="4" border="2" alt="Step 3" loading="lazy">
+                        <img src="images/bread/nokneadcrusty4.webp" width="160" height="160" hspace="4" vspace="4" border="2" alt="Step 4" loading="lazy">
+                    </center>
+                </details>
+            </article>
+        </section>
+        <!-- POTATO SECTION -->
+        <section id="potato">
+            <!-- Header -->
+            <br>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#4A2C2A">
+                <tr>
+                    <td align="center">
+                        <font size="1"><small><h2><font face="Georgia, serif" size="6" color="#FFD700">
+                            &nbsp;🥔 <b>POTATO</b> 🥔
+                        </font></h2></small></font>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <!-- Potato Salad -->
+            <article id="potato-salad">
+                <details>
+                    <summary>
+                        <font face="Georgia, serif" size="4" color="#8B4513">
+                            <b><i>POTATO SALAD</i></b>
+                        </font>
+                    </summary>
+                    <br>
+                    <center>
+                        <table width="90%" border="0" cellspacing="0" cellpadding="5">
+                            <tr>
+                                <td align="center" bgcolor="#FFE4B5">
+                                    <font face="Courier New, monospace" size="2" color="#8B4513">
+                                        <b>TIP:</b> Allow potatoes to cool slightly before adding mayonnaise to prevent it from splitting and becoming oily.
+                                    </font>
+                                </td>
+                            </tr>
+                        </table>
+                    </center>
+                    <br>
+                    <fieldset>
+                        <legend align="center">
+                            <font color="#808080" face="Courier New, monospace" size="3">
+                                <b>&nbsp;I N G R E D I E N T S&nbsp;</b>
+                            </font>
+                        </legend>
+                        <font face="Georgia, serif" size="2">
+                            <ul>
+                                <li>1½ cups yellow potatoes, cubed</li>
+                                <li>1 tbsp Dijon mustard, 2 tbsp mayonnaise</li>
+                                <li>1 cup chopped snap peas or green beans</li>
+                                <li>2 green onions, chopped, fresh dill</li>
+                            </ul>
+                        </font>
+                    </fieldset>
+                    <br>
+                    <font face="Courier New, monospace" size="2">
+                        <table border="0" cellpadding="1" cellspacing="0" width="100%">
+                            <tr>
+                                <td valign="top" align="right" ><font size="3" color="#DAA520"><b>1&nbsp;</b></font></td>
+                                <td valign="top">Boil potatoes in salted water until fork-tender (10-12 minutes).</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>2&nbsp;</b></font></td>
+                                <td valign="top">Drain potatoes and return to pot (off heat).</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>3&nbsp;</b></font></td>
+                                <td valign="top">Add mustard, mayonnaise, peas/beans, onions, and dill. Season with pepper.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>4&nbsp;</b></font></td>
+                                <td valign="top">Stir to coat and serve warm or chilled.</td>
+                            </tr>
+                        </table>
+                    </font>
+                    <br>
+                    <center>
+                        <img src="https://placehold.co/160x160/8B4513/FFFFFF?text=Boil+Cube" width="160" height="160" hspace="4" vspace="4" border="2" alt="Boil" loading="lazy">
+                        <img src="https://placehold.co/160x160/8B4513/FFFFFF?text=Chop+Veg" width="160" height="160" hspace="4" vspace="4" border="2" alt="Chop" loading="lazy">
+                        <img src="https://placehold.co/160x160/8B4513/FFFFFF?text=Mix" width="160" height="160" hspace="4" vspace="4" border="2" alt="Mix" loading="lazy">
+                        <img src="https://placehold.co/160x160/8B4513/FFFFFF?text=Chill" width="160" height="160" hspace="4" vspace="4" border="2" alt="Chill" loading="lazy">
+                    </center>
+                </details>
+            </article>
+        </section>
+        <!-- SOUP SECTION -->
+        <section id="soup">
+            <!-- Header -->
+            <br>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#4A2C2A">
+                <tr>
+                    <td align="center">
+                        <font size="1"><small><h2><font face="Georgia, serif" size="6" color="#FFD700">
+                            &nbsp;🥘 <b>SOUP</b> 🥘
+                        </font></h2></small></font>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <!-- Roasted Tomato -->
+            <article id="roasted-tomato">
+                <details>
+                    <summary>
+                        <font face="Georgia, serif" size="4" color="#8B4513">
+                            <b><i>ROASTED TOMATO</i></b>
+                        </font>
+                    </summary>
+                    <br>
+                    <center>
+                        <table width="90%" border="0" cellspacing="0" cellpadding="5">
+                            <tr>
+                                <td align="center" bgcolor="#FFE4B5">
+                                    <font face="Courier New, monospace" size="2" color="#8B4513">
+                                        Substitute coconut milk to make it vegan!
+                                    </font>
+                                </td>
+                            </tr>
+                        </table>
+                    </center>
+                    <br>
+                    <fieldset>
+                        <legend align="center">
+                            <font color="#808080" face="Courier New, monospace" size="3">
+                                <b>&nbsp;I N G R E D I E N T S&nbsp;</b>
+                            </font>
+                        </legend>
+                        <font face="Georgia, serif" size="2">
+                            <ul>
+                                <li>dozen tomatoes, halved</li>
+                                <li>large knob ginger</li>
+                                <li>2 heads garlic, unpeeled</li>
+                                <li>red onion</li>
+                                <li>bell pepper</li>
+                                <li>carrot</li>
+                                <li>3 cups vegetable stock</li>
+                                <li>balsamic vinegar</li>
+                                <li>heavy cream</li>
+                                <li>fresh basil</li>
+                            </ul>
+                        </font>
+                    </fieldset>
+                    <br>
+                    <font face="Courier New, monospace" size="2">
+                        <table border="0" cellpadding="1" cellspacing="0" width="100%">
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>1&nbsp;</b></font></td>
+                                <td valign="top">Preheat oven to 350°F.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>2&nbsp;</b></font></td>
+                                <td valign="top">Place halved tomatoes, onion, bell pepper, garlic, and carrot on a baking sheet.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>3&nbsp;</b></font></td>
+                                <td valign="top">Drizzle everything generously with olive oil and sprinkle with salt.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>4&nbsp;</b></font></td>
+                                <td valign="top">Bake for 35-40 minutes until roasted and slightly charred.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>5&nbsp;</b></font></td>
+                                <td valign="top">Squeeze the roasted garlic cloves out of their skins and discard the skins.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>6&nbsp;</b></font></td>
+                                <td valign="top">Scrape the pan to collect all juices and flavor bits, then transfer all roasted vegetables to a pot or blending container.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>7&nbsp;</b></font></td>
+                                <td valign="top">Add a splash of balsamic vinegar and fresh basil.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>8&nbsp;</b></font></td>
+                                <td valign="top">Stir in a splash of heavy cream, and season to taste.</td>
+                            </tr>
+                        </table>
+                    </font>
+                    <br>
+                    <center>
+                        <img src="images/soup/roastedtomato1.webp" width="160" height="160" hspace="4" vspace="4" border="2" alt="Step 1" loading="lazy">
+                        <img src="images/soup/roastedtomato2.webp" width="160" height="160" hspace="4" vspace="4" border="2" alt="Step 2" loading="lazy">
+                        <img src="https://placehold.co/160x160/8B4513/FFFFFF?text=Blend" width="160" height="160" hspace="4" vspace="4" border="2" alt="Step 3" loading="lazy">
+                        <img src="https://placehold.co/160x160/8B4513/FFFFFF?text=Cream" width="160" height="160" hspace="4" vspace="4" border="2" alt="Step 4" loading="lazy">
+                    </center>
+                </details>
+            </article>
+        </section>
+        <!-- SALAD SECTION -->
+        <section id="salad">
+            <!-- Header -->
+            <br>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#4A2C2A">
+                <tr>
+                    <td align="center">
+                        <font size="1"><small><h2><font face="Georgia, serif" size="6" color="#FFD700">
+                            &nbsp;🥗 <b>SALAD</b> 🥗
+                        </font></h2></small></font>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <!-- Nicoise -->
+            <article id="nicoise">
+                <details>
+                    <summary>
+                        <font face="Georgia, serif" size="4" color="#8B4513">
+                            <b><i>NIÇOISE</i></b>
+                        </font>
+                    </summary>
+                    <br>
+                    <center>
+                        <table width="90%" border="0" cellspacing="0" cellpadding="5">
+                            <tr>
+                                <td align="center" bgcolor="#FFE4B5">
+                                    <font face="Courier New, monospace" size="2" color="#8B4513">
+                                        The French are very specific about names — for maximum authenticity scatter half a cup of niçoise olives over the plates at Step 5.
+                                    </font>
+                                </td>
+                            </tr>
+                        </table>
+                    </center>
+                    <br>
+                    <fieldset>
+                        <legend align="center">
+                            <font color="#808080" face="Courier New, monospace" size="3">
+                                <b>&nbsp;I N G R E D I E N T S&nbsp;</b>
+                            </font>
+                        </legend>
+                        <font face="Georgia, serif" size="2">
+                            <ul>
+                                <li><abbr title="~283g">10 oz</abbr> green beans, trimmed</li>
+                                <li>4 large eggs</li>
+                                <li><abbr title="~454g">1 lb</abbr> red potatoes, diced large</li>
+                                <li><abbr title="~30ml">2 tbsp</abbr> dry white wine</li>
+                                <li><abbr title="~60ml">¼ cup</abbr> white wine vinegar</li>
+                                <li><abbr title="~30ml">2 tbsp</abbr> shallot, minced</li>
+                                <li><abbr title="~30ml">2 tbsp</abbr> dijon mustard</li>
+                                <li><abbr title="~2.4g">1 tbsp</abbr> fresh thyme, chopped</li>
+                                <li><abbr title="~6g">1 tsp</abbr> kosher salt</li>
+                                <li>freshly-ground black pepper, to taste</li>
+                                <li><abbr title="~180ml">¾ cup</abbr> extra-virgin olive oil</li>
+                                <li>8 cherry tomatoes, halved</li>
+                                <li>1 head Boston lettuce, separated into leaves</li>
+                                <li>6 radishes, quartered</li>
+                                <li><abbr title="312g">2 5½ oz cans</abbr> tuna in oil, drained</li>
+                            </ul>
+                        </font>
+                    </fieldset>
+                    <br>
+                    <font face="Courier New, monospace" size="2">
+                        <table border="0" cellpadding="1" cellspacing="0" width="100%">
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>1&nbsp;</b></font></td>
+                                <td valign="top">
+                                    Prepare stovetop with 3 pots:
+                                    <ul>
+                                        <li><b>Small:&nbsp</b> Salt water, bring to a boil, then add green beans and cook for 4 minutes.</li>
+                                        <li><b>Medium:</b> Follow the <a href="#steam-boiled-recipe" title="Steam-Boiled Eggs"><font color="#8B4513"><b>steam-boiled egg</b></font></a> method from above.</li>
+                                        <li><b>Large:&nbsp</b> Cover potatoes with cold water, season with salt, and bring to a simmer.  Cook until fork-tender (~5 minutes), drain, and transfer to a medium bowl to drizzle with wine.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right" ><font size="3" color="#DAA520"><b>2&nbsp;</b></font></td>
+                                <td valign="top">Meanwhile, create an ice bath big enough to cool the beans followed by the eggs.  Pat dry and let ingredients sit once cooled.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>3&nbsp;</b></font></td>
+                                <td valign="top">Whisk the vinegar, shallot, mustard, thyme, salt, and pepper together in a bowl, then whisk in the olive oil slowly to emulsify.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>4&nbsp;</b></font></td>
+                                <td valign="top">Dress the potatoes with a quarter of the prepared dressing while still warm to help them absorb the flavors of the vinaigrette.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>5&nbsp;</b></font></td>
+                                <td valign="top">Quarter the cooked eggs and toss the tomatoes in a small bowl with salt and pepper to taste, pouring any excess juices into the dressing.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>6&nbsp;</b></font></td>
+                                <td valign="top">Plate by starting with the lettuce, arrange potatoes, beans, radishes, eggs, tomatoes, and tuna on top, and drizzle with remaining dressing. </td>
+                            </tr>
+                        </table>
+                    </font>
+                    <br>
+                    <center>
+                        <img src="images/salad/nicoise1.webp" width="160" height="160" hspace="4" vspace="4" border="2" alt="Ingredients laid out" loading="lazy">
+                        <img src="images/salad/nicoise2.webp" width="160" height="160" hspace="4" vspace="4" border="2" alt="Final plating" loading="lazy">
+                    </center>
+                    <center>
+                        <a href="https://www.foodnetwork.com/recipes/food-network-kitchen/classic-nicoise-salad-recipe-2127613" target="_blank">
+                            <img src="images/view-original-recipe.png" width="340" height="40" border="0" alt="View Original Recipe">
+                        </a>
+                    </center>
+                </details>
+            </article>
+        </section>
+        <!-- SIDES SECTION -->
+        <section id="sides">
+            <!-- Header -->
+            <br>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#4A2C2A">
+                <tr>
+                    <td align="center">
+                        <font size="1"><small><h2><font face="Georgia, serif" size="6" color="#FFD700">
+                            &nbsp;🥡 <b>SIDES</b> 🥡
+                        </font></h2></small></font>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <!-- Pineapple Guacamole -->
+            <article id="pineapple-guacamole">
+                <details>
+                    <summary>
+                        <font face="Georgia, serif" size="4" color="#8B4513">
+                            <b><i>PINEAPPLE GUACAMOLE</i></b>
+                        </font>
+                    </summary>
+                    <br>
+                    <center>
+                        <table width="90%" border="0" cellspacing="0" cellpadding="5">
+                            <tr>
+                                <td align="center" bgcolor="#FFE4B5">
+                                    <font face="Courier New, monospace" size="2" color="#8B4513">
+                                        <b>TIP:</b> Don't skip the grilling! Caramelized pineapple adds depth that raw fruit lacks.
+                                    </font>
+                                </td>
+                            </tr>
+                        </table>
+                    </center>
+                    <br>
+                    <fieldset>
+                        <legend align="center">
+                            <font color="#808080" face="Courier New, monospace" size="3">
+                                <b>&nbsp;I N G R E D I E N T S&nbsp;</b>
+                            </font>
+                        </legend>
+                        <font face="Georgia, serif" size="2">
+                            <ul>
+                                <li>4 pineapple discs, 4 avocados</li>
+                                <li>Glaze: lime, brown sugar, honey, chili powder</li>
+                                <li>red onion, tomato, jalapeño, cilantro, cumin</li>
+                            </ul>
+                        </font>
+                    </fieldset>
+                    <br>
+                    <font face="Courier New, monospace" size="2">
+                        <table border="0" cellpadding="1" cellspacing="0" width="100%">
+                            <tr>
+                                <td valign="top" align="right" ><font size="3" color="#DAA520"><b>1&nbsp;</b></font></td>
+                                <td valign="top">Brush pineapple with glaze. Grill 3-4 mins per side. Dice.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>2&nbsp;</b></font></td>
+                                <td valign="top">Mash avocados. Mix with lime, onion, tomato, spices.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>3&nbsp;</b></font></td>
+                                <td valign="top">Fold in pineapple. Serve with chips.</td>
+                            </tr>
+                        </table>
+                    </font>
+                    <br>
+                    <center>
+                        <img src="https://placehold.co/160x160/8B4513/FFFFFF?text=Glaze" width="160" height="160" hspace="4" vspace="4" border="2" alt="Glaze" loading="lazy">
+                        <img src="https://placehold.co/160x160/8B4513/FFFFFF?text=Grill+Fruit" width="160" height="160" hspace="4" vspace="4" border="2" alt="Grill" loading="lazy">
+                        <img src="https://placehold.co/160x160/8B4513/FFFFFF?text=Mash+Avo" width="160" height="160" hspace="4" vspace="4" border="2" alt="Mash" loading="lazy">
+                        <img src="https://placehold.co/160x160/8B4513/FFFFFF?text=Mix" width="160" height="160" hspace="4" vspace="4" border="2" alt="Mix" loading="lazy">
+                    </center>
+                </details>
+            </article>
+        </section>
+        <!-- PASTA SECTION -->
+        <section id="pasta">
+            <!-- Header -->
+            <br>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#4A2C2A">
+                <tr>
+                    <td align="center">
+                        <font size="1"><small><h2><font face="Georgia, serif" size="6" color="#FFD700">
+                            &nbsp;🍝 <b>PASTA</b> 🍝
+                        </font></h2></small></font>
+                    </td>
+                </tr>
+            </table>
+            <br>
+        <!-- Baked Feta -->
+            <article id="baked-feta">
+                <details>
+                    <summary>
+                        <font face="Georgia, serif" size="4" color="#8B4513">
+                            <b><i>BAKED FETA</i></b>
+                        </font>
+                    </summary>
+                    <br>
+                    <center>
+                        <table width="90%" border="0" cellspacing="0" cellpadding="5">
+                            <tr>
+                                <td align="center" bgcolor="#FFE4B5">
+                                    <font face="Courier New, monospace" size="2" color="#8B4513">
+                                        Use a block of feta in brine rather than a crumbled product, which contains anti-caking agents that prevent it from melting smoothly.
+                                    </font>
+                                </td>
+                            </tr>
+                        </table>
+                    </center>
+                    <br>
+                    <fieldset>
+                        <legend align="center">
+                            <font color="#808080" face="Courier New, monospace" size="3">
+                                <b>&nbsp;I N G R E D I E N T S&nbsp;</b>
+                            </font>
+                        </legend>
+                        <font face="Georgia, serif" size="2">
+                            <ul>
+                                <li><abbr title="~600g">2 pints</abbr> cherry tomatoes, halved</li>
+                                <li><abbr title="~225g">8 oz block</abbr> feta cheese</li>
+                                <li><abbr title="~120ml">½ cup</abbr> extra-virgin olive oil, divided</li>
+                                <li>4 cloves garlic, minced</li>
+                                <li><abbr title="~280g">10 oz</abbr>dry pasta</li>
+                                <li>½ tsp dried oregano</li>
+                                <li>¼ tsp red pepper flakes</li>
+                                <li>1 cup fresh basil leaves, roughly chopped</li>
+                            </ul>
+                        </font>
+                    </fieldset>
+                    <br>
+                    <font face="Courier New, monospace" size="2">
+                        <table border="0" cellpadding="1" cellspacing="0" width="100%">
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>1&nbsp;</b></font></td>
+                                <td valign="top">Preheat oven to <abbr title="~200°C">400°F</abbr>.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>2&nbsp;</b></font></td>
+                                <td valign="top">Toss cherry tomatoes in a 9x13" baking dish with oregano, red pepper flakes, salt, pepper, and most of the olive oil until well-coated.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>3&nbsp;</b></font></td>
+                                <td valign="top">Nestle block of feta into center of baking dish and drizzle with remaining olive oil.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>4&nbsp;</b></font></td>
+                                <td valign="top">Bake for 30 minutes, then increase heat to <abbr title="~230°C">450°F</abbr> for 5-10 minutes until tomatoes burst and feta is golden-brown.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>5&nbsp;</b></font></td>
+                                <td valign="top">While baking, bring a large pot of salted water to a boil and cook pasta until al dente, reserving ½ cup of pasta water while draining.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>6&nbsp;</b></font></td>
+                                <td valign="top">Immediately add garlic to hot baking dish, then mash feta and tomatoes with fork in to form a sauce.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>7&nbsp;</b></font></td>
+                                <td valign="top">Incorporate cooked pasta and fresh basil into sauce, splashing in reserved pasta water as needed until glossy and evenly coated.</td>
+                            </tr>
+                        </table>
+                    </font>
+                    <br>
+                    <center>
+                        <img src="images/pasta/bakedfeta1.webp" width="160" height="160" hspace="4" vspace="4" border="2" alt="Step 1" loading="lazy">
+                        <img src="images/pasta/bakedfeta2.webp" width="160" height="160" hspace="4" vspace="4" border="2" alt="Step 2" loading="lazy">
+                        <img src="images/pasta/bakedfeta3.webp" width="160" height="160" hspace="4" vspace="4" border="2" alt="Step 3" loading="lazy">
+                        <img src="images/pasta/bakedfeta4.webp" width="160" height="160" hspace="4" vspace="4" border="2" alt="Step 4" loading="lazy">
+                    </center>
+                    <center>
+                        <a href="https://grilledcheesesocial.com/2019/06/27/baked-feta-pasta-with-tomatoes/" target="_blank">
+                            <img src="images/view-original-recipe.png" width="340" height="40" border="0" alt="View Original Recipe">
+                        </a>
+                    </center>
+                </details>
+            </article>
+        </section>
+        <!-- CHICKEN SECTION -->
+        <section id="chicken">
+            <!-- Header -->
+            <br>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#4A2C2A">
+                <tr>
+                    <td align="center">
+                        <font size="1"><small><h2><font face="Georgia, serif" size="6" color="#FFD700">
+                            &nbsp;🐓 <b>CHICKEN</b> 🐓
+                        </font></h2></small></font>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <!-- Butter Chicken -->
+            <article id="butter-chicken">
+                <details>
+                    <summary>
+                        <font face="Georgia, serif" size="4" color="#8B4513">
+                            <b><i>BUTTER CHICKEN</i></b>
+                        </font>
+                    </summary>
+                    <br>
+                    <center>
+                        <table width="90%" border="0" cellspacing="0" cellpadding="5">
+                            <tr>
+                                <td align="center" bgcolor="#FFE4B5">
+                                    <font face="Courier New, monospace" size="2" color="#8B4513">
+                                        <b>NOTE:</b> Do not let the sauce boil after adding the sour cream/dairy at the end to prevent curdling.
+                                    </font>
+                                </td>
+                            </tr>
+                        </table>
+                    </center>
+                    <br>
+                    <fieldset>
+                        <legend align="center">
+                            <font color="#808080" face="Courier New, monospace" size="3">
+                                <b>&nbsp;I N G R E D I E N T S&nbsp;</b>
+                            </font>
+                        </legend>
+                        <font face="Georgia, serif" size="2">
+                            <ul>
+                                <li>3 lbs chicken thighs, onion, garlic, ginger</li>
+                                <li>butter, broth, peanut butter, tomatoes</li>
+                                <li>spices (curry style), sour cream</li>
+                            </ul>
+                        </font>
+                    </fieldset>
+                    <br>
+                    <font face="Courier New, monospace" size="2">
+                        <table border="0" cellpadding="1" cellspacing="0" width="100%">
+                            <tr>
+                                <td valign="top" align="right" ><font size="3" color="#DAA520"><b>1&nbsp;</b></font></td>
+                                <td valign="top">Slow cook base ingredients (5-8 hrs low).</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>2&nbsp;</b></font></td>
+                                <td valign="top">Puree sauce. Add chicken. Cook 1-2 hours more.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>3&nbsp;</b></font></td>
+                                <td valign="top">Stir in sour cream and cilantro.</td>
+                            </tr>
+                        </table>
+                    </font>
+                    <br>
+                    <center>
+                        <img src="https://placehold.co/160x160/8B4513/FFFFFF?text=Prep+Base" width="160" height="160" hspace="4" vspace="4" border="2" alt="Base" loading="lazy">
+                        <img src="https://placehold.co/160x160/8B4513/FFFFFF?text=Puree" width="160" height="160" hspace="4" vspace="4" border="2" alt="Puree" loading="lazy">
+                        <img src="https://placehold.co/160x160/8B4513/FFFFFF?text=Cook+Chicken" width="160" height="160" hspace="4" vspace="4" border="2" alt="Chicken" loading="lazy">
+                        <img src="https://placehold.co/160x160/8B4513/FFFFFF?text=Cream" width="160" height="160" hspace="4" vspace="4" border="2" alt="Cream" loading="lazy">
+                    </center>
+                </details>
+            </article>
+        </section>
+        <!-- PORK SECTION -->
+        <section id="pork">
+            <!-- Header -->
+            <br>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#4A2C2A">
+                <tr>
+                    <td align="center">
+                        <font size="1"><small><h2><font face="Georgia, serif" size="6" color="#FFD700">
+                            &nbsp;🐖 <b>PORK</b> 🐖
+                        </font></h2></small></font>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <!-- Pepper Pulled Pork -->
+            <article id="pepper-pulled-pork">
+                <details>
+                    <summary>
+                        <font face="Georgia, serif" size="4" color="#8B4513">
+                            <b><i>PEPPER PULLED PORK</i></b>
+                        </font>
+                    </summary>
+                    <br>
+                    <center>
+                        <table width="90%" border="0" cellspacing="0" cellpadding="5">
+                            <tr>
+                                <td align="center" bgcolor="#FFE4B5">
+                                    <font face="Courier New, monospace" size="2" color="#8B4513">
+                                        Any dark caramel soda will do the job and provide a slightly different taste.
+                                    </font>
+                                </td>
+                            </tr>
+                        </table>
+                    </center>
+                    <br>
+                    <fieldset>
+                        <legend align="center">
+                            <font color="#808080" face="Courier New, monospace" size="3">
+                                <b>&nbsp;I N G R E D I E N T S&nbsp;</b>
+                            </font>
+                        </legend>
+                        <font face="Georgia, serif" size="2">
+                            <ul>
+                                <li>2½-3 lb pork butt/shoulder</li>
+                                <li>750ml Dr. Pepper</li>
+                                <li>1 medium onion, cut into wedges</li>
+                                <li>2 garlic cloves, minced</li>
+                                <li>1½ tsp dry ground mustard</li>
+                                <li>½ tsp cayenne pepper</li>
+                                <li>salt and pepper to taste</li>
+                                <li>¼ cup apple cider vinegar</li>
+                                <li>3 tbsp worcestershire sauce</li>
+                                <li>barbecue sauce</li>
+                                <li>bread rolls or buns</li>
+                            </ul>
+                        </font>
+                    </fieldset>
+                    <br>
+                    <font face="Courier New, monospace" size="2">
+                        <table border="0" cellpadding="1" cellspacing="0" width="100%">
+                            <tr>
+                                <td valign="top" align="right" ><font size="3" color="#DAA520"><b>1&nbsp;</b></font></td>
+                                <td valign="top">Distribute onion in bottom of slow cooker, then place pork on top.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>2&nbsp;</b></font></td>
+                                <td valign="top">Add garlic, mustard, cayenne, salt, pepper, apple cider vinegar, and worcestershire sauce, then pour soda overtop.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>3&nbsp;</b></font></td>
+                                <td valign="top">Cook on high for 4-5 hours, or low for 8.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>4&nbsp;</b></font></td>
+                                <td valign="top">Carefully remove pork and place on cutting board, then shred.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>5&nbsp;</b></font></td>
+                                <td valign="top">Return shredded pork to slow cooker for another hour.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>6&nbsp;</b></font></td>
+                                <td valign="top">Drain remaining juices, then add barbecue sauce to meat and onion mixture to reach desired sauciness.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>7&nbsp;</b></font></td>
+                                <td valign="top">Portion onto toasted buns and serve — pairs well with coleslaw or oven fries!</td>
+                            </tr>
+                        </table>
+                    </font>
+                    <br>
+                    <center>
+                        <img src="https://placehold.co/160x160/8B4513/FFFFFF?text=Mise+en+Place" width="160" height="160" hspace="4" vspace="4" border="2" alt="Mise en Place" loading="lazy">
+                        <img src="https://placehold.co/160x160/8B4513/FFFFFF?text=Slow+Cook" width="160" height="160" hspace="4" vspace="4" border="2" alt="Cook" loading="lazy">
+                        <img src="https://placehold.co/160x160/8B4513/FFFFFF?text=Shred" width="160" height="160" hspace="4" vspace="4" border="2" alt="Shred" loading="lazy">
+                        <img src="https://placehold.co/160x160/8B4513/FFFFFF?text=Sauce" width="160" height="160" hspace="4" vspace="4" border="2" alt="Sauce" loading="lazy">
+                    </center>
+                    <center>
+                        <a href="https://myretrokitchen.blogspot.com/2011/10/dr-pepper-pulled-pork-in-slow-cooker.html" target="_blank">
+                            <img src="images/view-original-recipe.png" width="340" height="40" border="0" alt="View Original Recipe">
+                        </a>
+                    </center>
+                </details>
+            </article>
+        </section>
+        <!-- BEEF SECTION -->
+        <section id="beef">
+            <!-- Header -->
+            <br>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#4A2C2A">
+                <tr>
+                    <td align="center">
+                        <font size="1"><small><h2><font face="Georgia, serif" size="6" color="#FFD700">
+                            &nbsp;🐄 <b>BEEF</b> 🐄
+                        </font></h2></small></font>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <!-- Braised Pot Roast -->
+            <article id="braised-pot-roast">
+                <details>
+                    <summary>
+                        <font face="Georgia, serif" size="4" color="#8B4513">
+                            <b><i>BRAISED POT ROAST</i></b>
+                        </font>
+                    </summary>
+                    <br>
+                    <center>
+                        <table width="90%" border="0" cellspacing="0" cellpadding="5">
+                            <tr>
+                                <td align="center" bgcolor="#FFE4B5">
+                                    <font face="Courier New, monospace" size="2" color="#8B4513">
+                                        <b>CRITICAL STEP:</b> Sear the roast thoroughly until dark brown. This creates the flavor base for the sauce.
+                                    </font>
+                                </td>
+                            </tr>
+                        </table>
+                    </center>
+                    <br>
+                    <fieldset>
+                        <legend align="center">
+                            <font color="#808080" face="Courier New, monospace" size="3">
+                                <b>&nbsp;I N G R E D I E N T S&nbsp;</b>
+                            </font>
+                        </legend>
+                        <font face="Georgia, serif" size="2">
+                            <ul>
+                                <li>2-3 lb chuck roast, onion, garlic</li>
+                                <li>red wine, beef broth, thyme, rosemary</li>
+                                <li>potatoes, carrots</li>
+                            </ul>
+                        </font>
+                    </fieldset>
+                    <br>
+                    <font face="Courier New, monospace" size="2">
+                        <table border="0" cellpadding="1" cellspacing="0" width="100%">
+                            <tr>
+                                <td valign="top" align="right" ><font size="3" color="#DAA520"><b>1&nbsp;</b></font></td>
+                                <td valign="top">Sear seasoned roast in Dutch oven. Remove.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>2&nbsp;</b></font></td>
+                                <td valign="top">Cook onions/garlic. Deglaze with wine. Add broth/herbs.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>3&nbsp;</b></font></td>
+                                <td valign="top">Return meat. Braise 300°F 1.5 hours.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>4&nbsp;</b></font></td>
+                                <td valign="top">Add veggies. Braise 1 hour more.</td>
+                            </tr>
+                        </table>
+                    </font>
+                    <br>
+                    <center>
+                        <img src="images/potroast/roast_sear.jpg" width="160" height="160" hspace="4" vspace="4" border="2" alt="Sear" loading="lazy">
+                        <img src="images/potroast/roast_braising.jpg" width="160" height="160" hspace="4" vspace="4" border="2" alt="Braise" loading="lazy">
+                        <img src="images/potroast/roast_finished.jpg" width="160" height="160" hspace="4" vspace="4" border="2" alt="Finish" loading="lazy">
+                        <img src="images/potroast/roast_served.jpg" width="160" height="160" hspace="4" vspace="4" border="2" alt="Serve" loading="lazy">
+                    </center>
+                </details>
+            </article>
+        </section>
+        <!-- SEAFOOD SECTION -->
+        <section id="seafood">
+            <!-- Header -->
+            <br>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#4A2C2A">
+                <tr>
+                    <td align="center">
+                        <font size="1"><small><h2><font face="Georgia, serif" size="6" color="#FFD700">
+                            &nbsp;🐟 <b>SEAFOOD</b> 🐟
+                        </font></h2></small></font>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <!-- Firecracker Shrimp -->
+            <article id="firecracker-shrimp">
+                <details>
+                    <summary>
+                        <font face="Georgia, serif" size="4" color="#8B4513">
+                            <b><i>FIRECRACKER SHRIMP</i></b>
+                        </font>
+                    </summary>
+                    <br>
+                    <center>
+                        <table width="90%" border="0" cellspacing="0" cellpadding="5">
+                            <tr>
+                                <td align="center" bgcolor="#FFE4B5">
+                                    <font face="Courier New, monospace" size="2" color="#8B4513">
+                                        <b>TECHNIQUE:</b> Maintain oil at 350°F. If it drops too low, the coating will be greasy rather than crispy.
+                                    </font>
+                                </td>
+                            </tr>
+                        </table>
+                    </center>
+                    <br>
+                    <fieldset>
+                        <legend align="center">
+                            <font color="#808080" face="Courier New, monospace" size="3">
+                                <b>&nbsp;I N G R E D I E N T S&nbsp;</b>
+                            </font>
+                        </legend>
+                        <font face="Georgia, serif" size="2">
+                            <ul>
+                                <li>1 lb shrimp, cornstarch, oil</li>
+                                <li>Sauce: mayo, sweet chili, sriracha</li>
+                            </ul>
+                        </font>
+                    </fieldset>
+                    <br>
+                    <font face="Courier New, monospace" size="2">
+                        <table border="0" cellpadding="1" cellspacing="0" width="100%">
+                            <tr>
+                                <td valign="top" align="right" ><font size="3" color="#DAA520"><b>1&nbsp;</b></font></td>
+                                <td valign="top">Mix sauce ingredients.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>2&nbsp;</b></font></td>
+                                <td valign="top">Coat shrimp in cornstarch. Fry 2-3 mins.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>3&nbsp;</b></font></td>
+                                <td valign="top">Toss hot shrimp in sauce. Serve on greens.</td>
+                            </tr>
+                        </table>
+                    </font>
+                    <br>
+                    <center>
+                        <img src="https://placehold.co/160x160/8B4513/FFFFFF?text=Coat" width="160" height="160" hspace="4" vspace="4" border="2" alt="Coat" loading="lazy">
+                        <img src="https://placehold.co/160x160/8B4513/FFFFFF?text=Fry" width="160" height="160" hspace="4" vspace="4" border="2" alt="Fry" loading="lazy">
+                        <img src="https://placehold.co/160x160/8B4513/FFFFFF?text=Sauce" width="160" height="160" hspace="4" vspace="4" border="2" alt="Sauce" loading="lazy">
+                        <img src="https://placehold.co/160x160/8B4513/FFFFFF?text=Serve" width="160" height="160" hspace="4" vspace="4" border="2" alt="Serve" loading="lazy">
+                    </center>
+                </details>
+            </article>
+        </section>
+        <!-- DESSERT SECTION -->
+        <section id="dessert">
+            <!-- Header -->
+            <br>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#4A2C2A">
+                <tr>
+                    <td align="center">
+                        <font size="1"><small><h2><font face="Georgia, serif" size="6" color="#FFD700">
+                            &nbsp;🎂 <b>DESSERT</b> 🎂
+                        </font></h2></small></font>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <!-- Banana Bread -->
+            <article id="banana-bread">
+                <details>
+                    <summary>
+                        <font face="Georgia, serif" size="4" color="#8B4513">
+                            <b><i>BANANA BREAD</i></b>
+                        </font>
+                    </summary>
+                    <br>
+                    <center>
+                        <table width="90%" border="0" cellspacing="0" cellpadding="5">
+                            <tr>
+                                <td align="center" bgcolor="#FFE4B5">
+                                    <font face="Courier New, monospace" size="2" color="#8B4513">
+                                        Frozen bananas create extra liquid, but you can microwave fresh ones to artificially ripen them.
+                                    </font>
+                                </td>
+                            </tr>
+                        </table>
+                    </center>
+                    <br>
+                    <fieldset>
+                        <legend align="center">
+                            <font color="#808080" face="Courier New, monospace" size="3">
+                                <b>&nbsp;I N G R E D I E N T S&nbsp;</b>
+                            </font>
+                        </legend>
+                        <font face="Georgia, serif" size="2">
+                            <ul>
+                                <li><abbr title="~240g">1¾ cups</abbr> all-purpose flour</li>
+                                <li>1 tsp baking soda</li>
+                                <li>½ tsp salt</li>
+                                <li>6 ripe bananas, peeled</li>
+                                <li>8 tbsp unsalted butter, melted and cooled</li>
+                                <li>2 large eggs</li>
+                                <li>¾ cup packed light brown sugar</li>
+                                <li>1 tsp vanilla extract</li>
+                                <li>2 tsp granulated sugar</li>
+                            </ul>
+                        </font>
+                    </fieldset>
+                    <br>
+                    <font face="Courier New, monospace" size="2">
+                        <table border="0" cellpadding="1" cellspacing="0" width="100%">
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>1&nbsp;</b></font></td>
+                                <td valign="top">Adjust oven rack to middle position, preheat oven to <abbr title="~177°C">350°F</abbr>, and grease a 9x5" loaf pan.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>2&nbsp;</b></font></td>
+                                <td valign="top">In a large bowl, whisk together flour, baking soda, and salt.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>3&nbsp;</b></font></td>
+                                <td valign="top">Place bananas in a strainer set over a bowl and let it drain, stirring occasionally, for 15 minutes.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>4&nbsp;</b></font></td>
+                                <td valign="top">Transfer collected liquid to a medium saucepan and cook over medium-high heat until it reduces to a ¼ cup — about 5 minutes.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>5&nbsp;</b></font></td>
+                                <td valign="top">Return bananas to bowl, mash in reduced liquid until mostly smooth, then whisk in melted butter, eggs, brown sugar, and vanilla.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>6&nbsp;</b></font></td>
+                                <td valign="top">Pour banana mixture into flour mixture, stir until just combined, then transfer batter into prepared pan.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>7&nbsp;</b></font></td>
+                                <td valign="top">Sprinkle granulated sugar evenly over loaf, then bake until skewer inserted in center of loaf comes out clean — about 55 minutes to 1¼ hour, rotating halfway through baking.</td>
+                            </tr>
+                            <tr>
+                                <td valign="top" align="right"><font size="3" color="#DAA520"><b>8&nbsp;</b></font></td>
+                                <td valign="top">Let loaf cool in pan for 10 minutes, then remove and let cool on wire rack for 1 hour before serving.</td>
+                            </tr>
+                        </table>
+                    </font>
+                    <br>
+                    <center>
+                        <img src="https://placehold.co/160x160/8B4513/FFFFFF?text=Mash+Banana" width="160" height="160" hspace="4" vspace="4" border="2" alt="Mash" loading="lazy">
+                        <img src="https://placehold.co/160x160/8B4513/FFFFFF?text=Mix+Batter" width="160" height="160" hspace="4" vspace="4" border="2" alt="Batter" loading="lazy">
+                        <img src="https://placehold.co/160x160/8B4513/FFFFFF?text=Bake" width="160" height="160" hspace="4" vspace="4" border="2" alt="Bake" loading="lazy">
+                        <img src="https://placehold.co/160x160/8B4513/FFFFFF?text=Cool" width="160" height="160" hspace="4" vspace="4" border="2" alt="Cool" loading="lazy">
+                    </center>
+                </details>
+            </article>
+        </section>
+        <br>
+    </main>
+    <footer>
+        <hr>
+        <center>
+            <a href="#top" title="Back to Top"><font face="Verdana, Arial, sans-serif" size="2" color="#8B4513">⬆ back to top ⬆</font></a>
+            <br><br>
+            <address>
+                <font face="Verdana, Arial, sans-serif" size="2" color="#8B4513">
+                    <small>
+                        Built to showcase the capabilities of our internet's foundation!
+                        <br>
+                        Learn more here → 
+                        <a href="https://sandyfletcher.ca/building/html" target="_blank" title="Project Writeup">
+                            <font size="3" color="#EADDCA">🔎</font>
+                        </a>
+                    </small>
+                </font>
+            </address>
+        </center>
+    </footer>
+</body>
+</html>
