@@ -2,16 +2,14 @@
 
 A home recipe book that doubles as a showcase of what HTML alone can do.
 
-**The one rule:** the site is pure HTML. No CSS (not even a `style` attribute), no JavaScript, no build step. Every visual and interactive effect comes from HTML elements and attributes, including old presentational ones that browsers still honour.
+The site is **pure HTML** — no CSS, no JavaScript, no build step. Every effect comes from HTML elements and attributes, including old presentational ones that browsers still honour.
 
 Live at [html.sandyfletcher.ca](https://html.sandyfletcher.ca/). Currently on GitHub Pages; moving to Netlify as a subdomain of sandyfletcher.ca.
 
 ---
 
-## How the HTML is used
-
 ### Page foundations
-- **`<!DOCTYPE html>`, `lang`, `charset`, viewport `<meta>`**: standards mode, correct language for screen readers, UTF-8 for fractions (½ ⅓ ¾), accents (Niçoise, Bánh Mì) and emoji, and proper scaling on phones.
+- **`<!DOCTYPE html>`, `lang`, `charset`, viewport `<meta>`**: standards mode, correct language for screen readers, UTF-8 for fractions/accents, and proper scaling on phones.
 - **Favicon** through `<link rel="icon">`. The path is relative so it also works when the file is opened from disk.
 - **Share previews**:
   - `<meta name="description">` plus Open Graph tags (`og:title`, `og:description`, `og:image` with width and height, `og:url`) and `twitter:card`, so links render as cards in chats and social apps.
@@ -89,25 +87,6 @@ Each recipe follows `templaterecipe.html`:
 
 ---
 
-## Workflow notes
-
-### Adding a recipe
-Copy `templaterecipe.html` into the right `<section>`. Then:
-- Give the `<article>` a lowercase, hyphenated `id` taken from the title, e.g. `id="banana-bread"`.
-- Fill in the content and use `<abbr title="~metric">` for imperial measurements.
-- Delete the tip box if there's no real tip.
-
-### Adding photos
-Shoot square, then convert to 320px WebP with location data removed. With ImageMagick 7 (on Windows use `magick`; ImageMagick 6 uses `convert`):
-
-```
-magick input.jpg -auto-orient -strip -resize 320x320 -quality 82 output.webp
-```
-
-`-auto-orient` must come before `-strip`, otherwise phone photos can end up sideways. Don't commit the original JPGs.
-
----
-
 ## TODO
 
 - [ ] **Republish as a fresh repository** to drop all earlier history, including the full-size photos that contained GPS coordinates:
@@ -116,8 +95,6 @@ magick input.jpg -auto-orient -strip -resize 320x320 -quality 82 output.webp
   - [ ] Delete the old GitHub repository. Force-pushing a fresh branch isn't enough, because old commits can stay reachable by their hash.
   - [ ] Create a new repository, `git init`, commit, push, and connect it to the host (see *Move to Netlify* below).
   - [ ] Check for forks of the old repository. Deleting it doesn't remove forks.
-- [ ] **Move recipes over from `thorough.html`** into the standard format, then delete `thorough.html`.
-- [ ] Decide whether `templaterecipe.html` stays (outside the published site) or goes once migration is done.
 - [ ] **Replace placeholder photos**, which still load from placehold.co:
   - Recipes: tofu bánh mì, potato salad, roasted tomato (2 of 4), pineapple guacamole, butter chicken, pepper pulled pork, firecracker shrimp, banana bread.
   - Once these are gone, the site has no outside dependencies.
